@@ -1,0 +1,30 @@
+{
+  "name": "asyncapi-directory",
+  "version": "1.0.0",
+  "description": "Directory of asynchronous APIs in AsyncAPI format",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/APIs-guru/asyncapi-directory.git"
+  },
+  "keywords": [
+    "asyncapi",
+    "async",
+    "api"
+  ],
+  "author": "Mike Ralphson",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/APIs-guru/asyncapi-directory/issues"
+  },
+  "homepage": "https://github.com/APIs-guru/asyncapi-directory#readme",
+  "dependencies": {
+    "liquid-node": "^3.0.0"
+  }
+}
