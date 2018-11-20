@@ -2,6 +2,7 @@
 # Metadata
 slug: slack.com@v1.0.0
 name: Slack Events API
+layout: default
 ---
 # Slack Events API documentation
 

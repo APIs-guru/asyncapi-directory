@@ -3,5 +3,5 @@ layout: default
 ---
 # APIs
 
-{% for value in site.APIs %}* {{ value.slug }} - [{{ value.name }}]({{ value.url }})
+{% for value in site.APIs %}* {{ value.slug }} - [{{ value.name }}]({{ value.slug }}.html)
 {% endfor %}
