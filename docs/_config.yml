@@ -1,1 +1,10 @@
 theme: jekyll-theme-architect
+show_downloads: true
+collections_dir: /
+collections:
+  posts:
+    hidden: true
+  APIs:
+    slug: apis
+    name: APIs
+    hidden: false
