@@ -1,4 +1,4 @@
 # APIs
 
-{% for value in site.apis %}* {{ value }}
+{% for value in site.APIs %}* {{ value.slug }} - {{ value.name }}
 {% endfor %}
