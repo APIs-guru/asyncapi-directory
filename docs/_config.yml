@@ -5,6 +5,7 @@ collections:
   posts:
     hidden: true
   APIs:
+    output: true
     slug: apis
     name: APIs
     hidden: false
