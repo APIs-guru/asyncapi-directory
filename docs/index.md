@@ -2,4 +2,4 @@
 
 ## The APIs
 
-* [APIs](Browse the APIs)
+* [Browse the APIs](APIs)
