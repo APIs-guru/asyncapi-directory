@@ -23,6 +23,7 @@ externalDocs:
 # Slack Events API
 
 * Version: `1.0.0`
+* [Full details](../html/slack.com:events@v1.0.0.html)
 
 
 * Contact: 📧 [Slack Platform Support](mailto:developers@slack.com)

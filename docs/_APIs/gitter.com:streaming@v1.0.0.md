@@ -15,6 +15,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 # Gitter Streaming API
 
 * Version: `1.0.0`
+* [Full details](../html/gitter.com:streaming@v1.0.0.html)
 
 
 

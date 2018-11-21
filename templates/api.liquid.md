@@ -1,6 +1,7 @@
 # {{ info.title }}
 
 * Version: `{{ info.version }}`
+* [Full details](../html/{{ slug }}.html)
 {% if info.contact %}
 {% if info.contact.email %}
 * Contact: 📧 [{{ info.contact.name }}](mailto:{{ info.contact.email }})

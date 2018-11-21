@@ -16,6 +16,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 # NPG
 
 * Version: `1.0.0`
+* [Full details](../html/npg.local@v1.0.0.html)
 
 
 

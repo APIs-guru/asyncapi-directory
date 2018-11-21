@@ -19,6 +19,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 # Scinap Sinapse API
 
 * Version: `0.0.1`
+* [Full details](../html/soporte-tecnico.bitnamiapp.com:IoT-Device-Simulator@v0.0.1.html)
 
 
 

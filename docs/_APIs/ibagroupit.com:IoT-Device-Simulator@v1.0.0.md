@@ -16,6 +16,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 # IoT Data simulator websocket/STOMP API
 
 * Version: `1.0.0`
+* [Full details](../html/ibagroupit.com:IoT-Device-Simulator@v1.0.0.html)
 
 
 

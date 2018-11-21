@@ -9,6 +9,7 @@ const fetch = require('node-fetch');
 const liquid = require('liquid-node');
 const yaml = require('js-yaml');
 const engine = new liquid.Engine();
+const docs = require('asyncapi-docgen');
 
 const metadata = yaml.safeLoad(fs.readFileSync('./docs/_data/metadata.yaml','utf8'),{json:true});
 const templateStr = fs.readFileSync('./templates/api.liquid.md','utf8');
@@ -34,16 +35,23 @@ async function main() {
                         info = obj.info;
                         console.log('   @v'+info.version,info.title);
                         const filename = api + (service === 'default' ? '' : ':'+service) + '@v' + info.version;
+
                         fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
+
                         const header = { slug: filename, name: info.title, service: service, layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService, externalDocs: obj.externalDocs };
                         const markdown = await engine.parseAndRender(templateStr, header);
                         const output = '---\n'+yaml.dump(header)+'\n---\n'+markdown;
                         fs.writeFile('./docs/_APIs/'+filename+'.md',output,'utf8',function(err){ if (err) console.warn(err.message) });
+
+                        const html = await docs.generateFullHTML(str);
+
+                        fs.writeFile('./docs/html/'+filename+'.html',html,'utf8',function(err){ if (err) console.warn(err.message) });
+
                     }
                     else console.warn(util.inspect(obj));
                 }
                 catch (ex) {
-                    console.warn(ex.message);
+                    console.warn(ex);
                 }
             }
         }
