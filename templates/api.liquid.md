@@ -16,6 +16,9 @@
 {% if description %}
 ## {{ description }}
 {% endif %}
+{% if externalDocs and externalDocs.description %}
+## {{ externalDocs.description }}
+{% endif %}
 
 * [Download from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/{{ slug | url_encode }}.yaml)
 * [Download original]({{ origin }})
@@ -24,7 +27,7 @@
 {
   "@context": "http://schema.org/",
   "@type": "WebAPI",
-{% if description %}  "description": "{{ description }}",{% endif %}
+{% if description %}  "description": "{{ description or externalDocs.description }}",{% endif %}
 {% if externalDocs %}  "documentation": "{{ externalDocs.url }}",{% endif %}
 {% if info.termsOfService %}  "termsOfService": "{{ info.termsOfService }}",{% endif %}
   "name": "{{ info.title }}"

@@ -37,6 +37,9 @@ externalDocs:
 
 
 
+## Slack Events API documentation
+
+
 * [Download from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/slack.com%3Aevents%40v1.0.0.yaml)
 * [Download original](https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json)
 

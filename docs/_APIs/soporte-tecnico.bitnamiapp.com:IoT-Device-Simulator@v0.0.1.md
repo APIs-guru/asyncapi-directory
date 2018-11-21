@@ -24,6 +24,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
+
 * [Download from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/soporte-tecnico.bitnamiapp.com%3AIoT-Device-Simulator%40v0.0.1.yaml)
 * [Download original](https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json)
 
