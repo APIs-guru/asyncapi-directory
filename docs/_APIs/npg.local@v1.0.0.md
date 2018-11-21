@@ -22,8 +22,8 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
-* [Download from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/npg.local%40v1.0.0.yaml)
-* [Download original](https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json)
+* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/npg.local%40v1.0.0.yaml)
+* [Download original / latest](https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json)
 
 <script type="application/ld+json">
 {
