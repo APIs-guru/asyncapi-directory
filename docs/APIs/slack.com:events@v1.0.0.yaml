@@ -16,7 +16,10 @@ components:
           items:
             type: string
           minItems: 1
-          title: An array of string-based User IDs. Each member of the collection represents a user that has installed your application/bot and indicates the described event would be visible to those users.
+          title: >-
+            An array of string-based User IDs. Each member of the collection
+            represents a user that has installed your application/bot and
+            indicates the described event would be visible to those users.
           type: array
           uniqueItems: true
         event:
@@ -42,12 +45,16 @@ components:
               type: message
               user: U061F7AUR
         event_id:
-          title: 'A unique identifier for this specific event, globally unique across all workspaces.'
+          title: >-
+            A unique identifier for this specific event, globally unique across
+            all workspaces.
           type: string
           x-examples:
             - Ev0PV52K25
         event_time:
-          title: The epoch timestamp in seconds indicating when this event was dispatched.
+          title: >-
+            The epoch timestamp in seconds indicating when this event was
+            dispatched.
           type: integer
           x-examples:
             - 1525215129
@@ -60,7 +67,9 @@ components:
           title: A verification token to validate the event originated from Slack
           type: string
         type:
-          title: 'Indicates which kind of event dispatch this is, usually `event_callback`'
+          title: >-
+            Indicates which kind of event dispatch this is, usually
+            `event_callback`
           type: string
           x-examples:
             - event_callback
@@ -126,18 +135,24 @@ info:
   title: Slack Events API
   version: 1.0.0
 servers:
-  - description: A pre-registered Request URL on servers you control where subscriptions will be delivered.
+  - description: >-
+      A pre-registered Request URL on servers you control where subscriptions
+      will be delivered.
     scheme: https
     url: '{request_url}'
     variables:
       request_url:
         description: Your chosen request URL where events will be delivered.
-  - description: Your Slack app management console's event subscription configurator. Visit in a web browser and sign in to your workspace.
+  - description: >-
+      Your Slack app management console's event subscription configurator. Visit
+      in a web browser and sign in to your workspace.
     scheme: https
     url: 'https://api.slack.com/apps/{slack_app_id}/event-subscriptions'
     variables:
       slack_app_id:
-        description: 'Your Slack app''s unique identifier, found in the URL when editing your app on api.slack.com.'
+        description: >-
+          Your Slack app's unique identifier, found in the URL when editing your
+          app on api.slack.com.
 tags:
   - description: Events less about a workspace and more about your app
     name: app_event
@@ -721,7 +736,9 @@ topics:
         url: 'https://api.slack.com/events/link_shared'
       payload:
         $ref: '#/components/schemas/GenericEventWrapper'
-      summary: A message was posted containing one or more links relevant to your application
+      summary: >-
+        A message was posted containing one or more links relevant to your
+        application
       tags:
         - name: allows_user_tokens
         - name: allows_workspace_tokens
@@ -771,7 +788,9 @@ topics:
         url: 'https://api.slack.com/events/message'
       payload:
         additionalProperties: true
-        description: Generated from events/events-1512674163.json with shasum b83372d878e1276a26d9e4df3d4a2563a60440a6
+        description: >-
+          Generated from events/events-1512674163.json with shasum
+          b83372d878e1276a26d9e4df3d4a2563a60440a6
         properties:
           api_app_id:
             title: Your Slack app's unique ID
@@ -941,7 +960,9 @@ topics:
           event_time:
             type: integer
           team_id:
-            title: The unique identifier of the team/workspace where the event happened
+            title: >-
+              The unique identifier of the team/workspace where the event
+              happened
             type: string
           token:
             title: Verification token used to validate the origin of the event

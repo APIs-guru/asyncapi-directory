@@ -1,10 +1,9 @@
-asyncapi: '1.2.0'
+asyncapi: 1.2.0
 info:
   title: Gitter Streaming API
-  version: '1.0.0'
-
+  version: 1.0.0
 servers:
-  - url: https://stream.gitter.im/v1/rooms/{roomId}/{resource}
+  - url: 'https://stream.gitter.im/v1/rooms/{roomId}/{resource}'
     scheme: https
     schemeVersion: '1.1'
     variables:
@@ -15,18 +14,15 @@ servers:
         enum:
           - chatMessages
           - events
-
 security:
   - httpBearerToken: []
-
 stream:
   framing:
-    type: 'chunked'
-    delimiter: '\r\n'
+    type: chunked
+    delimiter: \r\n
   read:
     - $ref: '#/components/messages/chatMessage'
     - $ref: '#/components/messages/heartbeat'
-
 components:
   securitySchemes:
     httpBearerToken:
@@ -35,8 +31,8 @@ components:
   messages:
     chatMessage:
       summary: >-
-        A message represents an individual chat message sent to a room.
-        They are a sub-resource of a room.
+        A message represents an individual chat message sent to a room. They are
+        a sub-resource of a room.
       payload:
         type: object
         properties:
@@ -131,9 +127,9 @@ components:
           gv:
             type: string
             description: Stands for "Gravatar version" and is used for cache busting.
-
     heartbeat:
       summary: Its purpose is to keep the connection alive.
       payload:
         type: string
-        enum: ["\r\n"]
+        enum:
+          - "\r\n"

@@ -1,7 +1,0 @@
-# Metadata
-slack.com:
-  default:
-    origin: https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
-gitter.com:
-  streaming:
-    origin: https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml

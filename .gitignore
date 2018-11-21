@@ -1,3 +1,5 @@
+*.bak
+
 # Logs
 logs
 *.log
