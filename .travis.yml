@@ -3,3 +3,12 @@ node_js:
   - "lts/*"
 script:
   - node index.js
+deploy:
+  provider: pages
+  github-token: $GITHUB_TOKEN
+  skip-cleanup: true
+  keep-history: true
+  target-branch: master
+  verbose: true
+  on:
+    branch: master
