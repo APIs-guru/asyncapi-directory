@@ -32,7 +32,7 @@ externalDocs:
 
 
 
-* ToS: [https://slack.com/terms-of-service/api)
+* ToS: [https://slack.com/terms-of-service/api](https://slack.com/terms-of-service/api)
 
 
 

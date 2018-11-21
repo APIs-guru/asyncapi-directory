@@ -10,7 +10,7 @@
 {% endif %}
 {% endif %}
 {% if info.termsOfService %}
-* ToS: [{{ info.termsOfService]({{ info.termsOfService }})
+* ToS: [{{ info.termsOfService}}]({{ info.termsOfService }})
 {% endif %}
 
 {% if description %}
