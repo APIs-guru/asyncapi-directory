@@ -20,6 +20,8 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
+## NPG server API
+
 
 
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/npg.local%40v1.0.0.yaml)
@@ -29,7 +31,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 {
   "@context": "http://schema.org/",
   "@type": "WebAPI",
-
+  "description": "NPG server API",
 
 
   "name": "NPG"

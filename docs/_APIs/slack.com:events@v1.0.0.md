@@ -36,6 +36,8 @@ externalDocs:
 
 
 
+## A webhook-based events bus using a subscription model for Slack apps
+
 
 ## Slack Events API documentation
 
@@ -47,7 +49,7 @@ externalDocs:
 {
   "@context": "http://schema.org/",
   "@type": "WebAPI",
-
+  "description": "A webhook-based events bus using a subscription model for Slack apps",
   "documentation": "https://api.slack.com/events-api",
   "termsOfService": "https://slack.com/terms-of-service/api",
   "name": "Slack Events API"

@@ -23,6 +23,8 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
+## The SCINAP API allows you to manage the Sinapse IoT HUB
+
 
 
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/soporte-tecnico.bitnamiapp.com%3AIoT-Device-Simulator%40v0.0.1.yaml)
@@ -32,7 +34,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 {
   "@context": "http://schema.org/",
   "@type": "WebAPI",
-
+  "description": "The SCINAP API allows you to manage the Sinapse IoT HUB",
 
 
   "name": "Scinap Sinapse API"
