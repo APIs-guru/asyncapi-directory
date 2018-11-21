@@ -1,4 +1,5 @@
 *.bak
+secrets.txt
 
 # Logs
 logs
