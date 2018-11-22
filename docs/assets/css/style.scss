@@ -1,0 +1,14 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+@font-face {
+	font-family: 'sansation';
+	src:
+		url('../fonts/Sansation_Regular.ttf')
+		format('truetype');
+}
+
+h1,h2,h3 { font-family: 'sansation', sans-serif; }
+
