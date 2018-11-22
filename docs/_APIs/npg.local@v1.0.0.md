@@ -20,7 +20,6 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
-
 ## NPG server API
 
 

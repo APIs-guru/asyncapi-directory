@@ -23,7 +23,6 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
 
 
 
-
 ## The SCINAP API allows you to manage the Sinapse IoT HUB
 
 
