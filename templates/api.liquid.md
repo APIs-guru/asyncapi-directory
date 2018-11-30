@@ -7,7 +7,7 @@
 * Contact: 📧 [{{ info.contact.name }}](mailto:{{ info.contact.email }}){% endif %}{% if info.contact.url %}
 * Contact: 🌐 [{{ info.contact.url }}]({{ info.contact.url }}){% endif %}
 {% endif %}{% if info.license %}
-* License: ⚖ [{{ info.license.name}}](https://spdx.org/licenses/{{info.license.name}}.html){% endif %}{% if info.termsOfService %}
+* License: ⚖ [{{ info.license.name}}](https://spdx.org/licenses/{{info.license.name | split: ' ' | join: '-'}}.html){% endif %}{% if info.termsOfService %}
 * ToS: [{{ info.termsOfService}}]({{ info.termsOfService }}){% endif %}
 
 {% if info.description %}
