@@ -4,21 +4,19 @@
 * [Full details](../html/{{ slug }}.html)
 {% if info.contact %}
 {% if info.contact.email %}
-* Contact: 📧 [{{ info.contact.name }}](mailto:{{ info.contact.email }})
-{% endif %}
-{% if info.contact.url %}
-* Contact: 🌐 [{{ info.contact.url }}]({{ info.contact.url }})
-{% endif %}
-{% endif %}
-{% if info.termsOfService %}
-* ToS: [{{ info.termsOfService}}]({{ info.termsOfService }})
-{% endif %}
+* Contact: 📧 [{{ info.contact.name }}](mailto:{{ info.contact.email }}){% endif %}{% if info.contact.url %}
+* Contact: 🌐 [{{ info.contact.url }}]({{ info.contact.url }}){% endif %}
+{% endif %}{% if info.license %}
+* License: ⚖ [{{ info.license.name}}](https://spdx.org/licenses/{{info.license.name | split: ' ' | join: '-'}}.html){% endif %}{% if info.termsOfService %}
+* ToS: [{{ info.termsOfService}}]({{ info.termsOfService }}){% endif %}
 
 {% if info.description %}
 ## {{ info.description }}
 {% endif %}
 {% if externalDocs and externalDocs.description %}
 ## {{ externalDocs.description }}
+
+* [External documentation]({{ externalDocs.url }})
 {% endif %}
 
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/{{ slug | url_encode }}.yaml)

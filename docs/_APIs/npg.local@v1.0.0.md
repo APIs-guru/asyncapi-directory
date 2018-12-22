@@ -20,7 +20,6 @@ externalDocs: {}
 
 
 
-
 ## NPG server API
 
 

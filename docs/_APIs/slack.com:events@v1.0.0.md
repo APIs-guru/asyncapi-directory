@@ -27,20 +27,17 @@ externalDocs:
 
 
 * Contact: 📧 [Slack Platform Support](mailto:developers@slack.com)
-
-
 * Contact: 🌐 [https://api.slack.com/support](https://api.slack.com/support)
 
-
-
 * ToS: [https://slack.com/terms-of-service/api](https://slack.com/terms-of-service/api)
-
 
 
 ## A webhook-based events bus using a subscription model for Slack apps
 
 
 ## Slack Events API documentation
+
+* [External documentation](https://api.slack.com/events-api)
 
 
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/slack.com%3Aevents%40v1.0.0.yaml)

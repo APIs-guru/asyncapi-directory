@@ -21,7 +21,7 @@ externalDocs: {}
 * Version: `0.0.1`
 * [Full details](../html/soporte-tecnico.bitnamiapp.com:IoT-Device-Simulator@v0.0.1.html)
 
-
+* License: ⚖ [Apache 2.0](https://spdx.org/licenses/Apache-2.0.html)
 
 
 ## The SCINAP API allows you to manage the Sinapse IoT HUB
