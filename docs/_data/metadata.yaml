@@ -1,21 +1,613 @@
-# Metadata
-
 slack.com:
   events:
-    origin: https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
-
+    origin: >-
+      https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
 gitter.com:
   streaming:
-    origin: https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml
-
+    origin: >-
+      https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml
 npg.local:
   default:
-    origin: https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json
-
+    origin: >-
+      https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json
 soporte-tecnico.bitnamiapp.com:
   IoT-Device-Simulator:
-    origin: https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json
-
+    origin: >-
+      https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json
 ibagroupit.com:
   IoT-Device-Simulator:
-    origin: https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml
+    origin: >-
+      https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml
+1forge:
+  api-usage-quota:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-api-usage-quota-api-stream-async.md
+  currency-conversion:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-currency-conversion-api-stream-async.md
+  financial-market-status:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-financial-market-status-api-stream-async.md
+  get-currency-quotes:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-get-currency-quotes-api-stream-async.md
+  get-currency-symbols:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-get-currency-symbols-api-stream-async.md
+bitstamp:
+  websocket:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/bitstamp/bitstamp-websocket-api-async.md
+blockchain-info:
+  blocks-by-pool:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/blockchain-info/blockchain-info-blocks-by-pool-stream-async.md
+  latest-block:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/blockchain-info/blockchain-info-latest-block-stream-async.md
+  raw-address:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/blockchain-info/blockchain-info-raw-address-stream-async.md
+  stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/blockchain-info/blockchain-info-stats-stream-async.md
+box:
+  create-task:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/box/box-create-task-stream-async.md
+  get-files-collaborations:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/box/box-get-files-collaborations-stream-async.md
+  pending-collaborations:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/box/box-pending-collaborations-stream-async.md
+  user-events-enterprise-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/box/box-user-events-enterprise-events-stream-async.md
+disqus:
+  categories-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-categories-list-stream-async.md
+  categories-listposts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-categories-listposts-stream-async.md
+  categories-listthreads:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-categories-listthreads-stream-async.md
+  forums-interestingforums:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-forums-interestingforums-stream-async.md
+  forums-listfollowers:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-forums-listfollowers-stream-async.md
+  forums-listposts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-forums-listposts-stream-async.md
+  forums-listthreads:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-forums-listthreads-stream-async.md
+  forums-listusers:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-forums-listusers-stream-async.md
+  interesting-users:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-interesting-users-stream-async.md
+  posts-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-posts-list-stream-async.md
+  posts-listpopular:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-posts-listpopular-stream-async.md
+  threads-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-threads-list-stream-async.md
+  threads-listhot:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-threads-listhot-stream-async.md
+  threads-listpopular:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-threads-listpopular-stream-async.md
+  threads-listposts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/disqus/disqus-threads-listposts-stream-async.md
+eventbrite:
+  get-categories:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/eventbrite/eventbrite-get-categories-stream-async.md
+  get-events--attendees:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/eventbrite/eventbrite-get-events--attendees-stream-async.md
+  get-events-search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/eventbrite/eventbrite-get-events-search-stream-async.md
+facebook:
+  get-album-photos:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-album-photos-stream-async.md
+  get-conversation-messages:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-conversation-messages-stream-async.md
+  get-conversation:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-conversation-stream-async.md
+  get-group-feed:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-group-feed-stream-async.md
+  get-life-event:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-life-event-stream-async.md
+  get-live-veo:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-live-veo-stream-async.md
+  get-message-shares:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-message-shares-stream-async.md
+  get-object-comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-object-comments-stream-async.md
+  get-object-likes:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-object-likes-stream-async.md
+  get-user-conversations:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-user-conversations-stream-async.md
+  get-user-photos:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-user-photos-stream-async.md
+flickr:
+  get-favorite-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/flickr/flickr-get-favorite-list-stream-async.md
+github:
+  get-emojis:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-emojis-stream-async.md
+  get-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-events-stream-async.md
+  get-feeds:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-feeds-stream-async.md
+  get-gists:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-gists-stream-async.md
+  get-issues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-issues-stream-async.md
+  get-meta:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-meta-stream-async.md
+  get-notifications:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-notifications-stream-async.md
+  get-organizations:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-organizations-stream-async.md
+  get-orgs-org-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-events-stream-async.md
+  get-orgs-org-issues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-issues-stream-async.md
+  get-orgs-org-repos:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-repos-stream-async.md
+  get-orgs-org:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-stream-async.md
+  get-rate-limit:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-rate-limit-stream-async.md
+  get-repositories:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-repositories-stream-async.md
+  get-search-code:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-search-code-stream-async.md
+  get-search-issues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-search-issues-stream-async.md
+  get-search-repositories:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-search-repositories-stream-async.md
+  get-search-users:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-search-users-stream-async.md
+  get-user-orgs:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-user-orgs-stream-async.md
+  get-users-username-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-users-username-events-stream-async.md
+  get-users-username-orgs:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-users-username-orgs-stream-async.md
+gitter:
+  streaming:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gitter/gitter-streaming-api-async.md
+gmail:
+  get-history:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gmail/gmail-get-history-stream-async.md
+  get-message:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gmail/gmail-get-message-stream-async.md
+  get-threads:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gmail/gmail-get-threads-stream-async.md
+  send-push-notification:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gmail/gmail-send-push-notification-stream-async.md
+google-sheets:
+  get-spreadsheet:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/google-sheets/google-sheets-get-spreadsheet-stream-async.md
+iex:
+  auction:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-auction-stream-async.md
+  batch-requests:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-batch-requests-stream-async.md
+  book:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-book-stream-async.md
+  corporate-actions:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-corporate-actions-stream-async.md
+  delayed-quote:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-delayed-quote-stream-async.md
+  hist:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-hist-stream-async.md
+  historical-summary:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-historical-summary-stream-async.md
+  market:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-market-stream-async.md
+  news:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-news-stream-async.md
+  operational-halt-status:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-operational-halt-status-stream-async.md
+  previous:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-previous-stream-async.md
+  quote:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-quote-stream-async.md
+  recent:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-recent-stream-async.md
+  security-event:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-security-event-stream-async.md
+  short-interest-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-short-interest-list-stream-async.md
+  splits:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-splits-stream-async.md
+  tops:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-tops-stream-async.md
+instagram:
+  instagram-carousel-comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-carousel-comments-stream-async.md
+  instagram-carousel:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-carousel-stream-async.md
+  instagram-media-comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-media-comments-stream-async.md
+  instagram-user:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-user-stream-async.md
+intrinio:
+  press-releases:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/intrinio/intrinio-press-releases-stream-async.md
+  securities:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/intrinio/intrinio-securities-stream-async.md
+linkedin:
+  get-companies:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/linkedin/linkedin-get-companies-stream-async.md
+  get-companies-updates:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/linkedin/linkedin-get-companies-updates-stream-async.md
+  get-people:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/linkedin/linkedin-get-people-stream-async.md
+meetup:
+  activityfeed:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-activityfeed-stream-async.md
+  categories:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-categories-stream-async.md
+  cities:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-cities-stream-async.md
+  comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-comments-stream-async.md
+  comments-v2:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-comments-v2-stream-async.md
+  concierge:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-concierge-stream-async.md
+  events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-events-stream-async.md
+  find-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-events-stream-async.md
+  find-groups:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-groups-stream-async.md
+  find-locations:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-locations-stream-async.md
+  find-topics:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-topics-stream-async.md
+  find-upcoming-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-upcoming-events-stream-async.md
+  find-venues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-find-venues-stream-async.md
+  members:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-members-stream-async.md
+  notifications:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-notifications-stream-async.md
+  openevents:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-openevents-stream-async.md
+  openvenues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-openvenues-stream-async.md
+  photos:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-photos-stream-async.md
+  rsvps-v2:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-rsvps-v2-stream-async.md
+  venues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-venues-stream-async.md
+new-york-times:
+  article-search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-article-search-stream-async.md
+  best-seller-list:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-best-seller-list-stream-async.md
+  most-emailed-by-section--time-period:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-most-emailed-by-section--time-period-stream-async.md
+  most-shared-by-section--time-period:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-most-shared-by-section--time-period-stream-async.md
+  most-viewed-by-section--time-period:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-most-viewed-by-section--time-period-stream-async.md
+  move-review-search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-move-review-search-stream-async.md
+  top-stories:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/new-york-times/new-york-times-top-stories-stream-async.md
+news-api:
+  everything:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/news-api/news-api-everything-stream-async.md
+  sources:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/news-api/news-api-sources-stream-async.md
+  top-headlines:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/news-api/news-api-top-headlines-stream-async.md
+pinboard:
+  get-all-posts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/pinboard/pinboard-get-all-posts-stream-async.md
+  get-popular-tags:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/pinboard/pinboard-get-popular-tags-stream-async.md
+  get-recent-posts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/pinboard/pinboard-get-recent-posts-stream-async.md
+  get-tags:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/pinboard/pinboard-get-tags-stream-async.md
+reddit:
+  get-best:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-best-stream-async.md
+  get-new-subreddits:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-new-subreddits-stream-async.md
+  get-search-reddit-names:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-search-reddit-names-stream-async.md
+  get-subreddit-hot:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-subreddit-hot-stream-async.md
+  get-subreddit-new:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-subreddit-new-stream-async.md
+  get-subreddit-rising:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-subreddit-rising-stream-async.md
+  get-subreddits-search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-subreddits-search-stream-async.md
+  get-subreddits-where:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/reddit/reddit-get-subreddits-where-stream-async.md
+sendgrid:
+  get-alerts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-alerts-stream-async.md
+  get-campaigns:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-campaigns-stream-async.md
+  get-categories-stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-categories-stats-stream-async.md
+  get-devices-stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-devices-stats-stream-async.md
+  get-geo-stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-geo-stats-stream-async.md
+  get-mailbox-provers-stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-mailbox-provers-stats-stream-async.md
+  get-stats:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-stats-stream-async.md
+  get-suppression-blocks:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-suppression-blocks-stream-async.md
+  get-suppression-bounces:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-suppression-bounces-stream-async.md
+slack:
+  real-time-messaging:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/slack/slack-real-time-messaging-api-async.md
+spotify:
+  get-albums:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/spotify/spotify-get-albums-stream-async.md
+  search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/spotify/spotify-search-stream-async.md
+stack-exchange:
+  get-answers:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-answers-stream-async.md
+  get-badges:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-badges-stream-async.md
+  get-comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-comments-stream-async.md
+  get-event:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-event-stream-async.md
+  get-posts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-posts-stream-async.md
+  get-questions:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-questions-stream-async.md
+  get-tags:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-get-tags-stream-async.md
+  search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stack-exchange/stack-exchange-search-stream-async.md
+stripe:
+  get-balance:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-balance-stream-async.md
+  get-charges:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-charges-stream-async.md
+  get-coupons:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-coupons-stream-async.md
+  get-customers:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-customers-stream-async.md
+  get-disputes:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-disputes-stream-async.md
+  get-events:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-events-stream-async.md
+  get-invoices:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-invoices-stream-async.md
+  get-orders:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-orders-stream-async.md
+  get-payments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-payments-stream-async.md
+  get-payouts:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-payouts-stream-async.md
+  get-recipients:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-recipients-stream-async.md
+  get-refunds:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-refunds-stream-async.md
+  get-subscriptions:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-subscriptions-stream-async.md
+  get-transfers:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/stripe/stripe-get-transfers-stream-async.md
+the-guardian:
+  search:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/the-guardian/the-guardian-search-stream-async.md
+twilio:
+  get-account-usage-record:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-account-usage-record-stream-async.md
+  get-applications:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-applications-stream-async.md
+  get-calls:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-calls-stream-async.md
+  get-conference-call-participants:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-conference-call-participants-stream-async.md
+  get-conference-calls:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-conference-calls-stream-async.md
+  get-message-media:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-message-media-stream-async.md
+  get-queues:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-queues-stream-async.md
+  get-recordings:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-recordings-stream-async.md
+  get-transcriptions:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-get-transcriptions-stream-async.md
+  getsmslist:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twilio/twilio-getsmslist-stream-async.md
+twitter:
+  list-statuses:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-list-statuses-stream-async.md
+  search-tweets:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-search-tweets-stream-async.md
+  show-available-trends:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-show-available-trends-stream-async.md
+  show-timelines-status:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-show-timelines-status-stream-async.md
