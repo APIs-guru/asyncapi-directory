@@ -14,7 +14,7 @@ info:
   termsOfService: 'https://slack.com/terms-of-service/api'
   title: Slack Events API
   version: 1.0.0
-termsOfService: !<tag:yaml.org,2002:js/undefined> ''
+termsOfService: ''
 externalDocs:
   description: Slack Events API documentation
   url: 'https://api.slack.com/events-api'

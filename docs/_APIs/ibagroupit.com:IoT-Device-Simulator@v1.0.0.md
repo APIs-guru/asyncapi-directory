@@ -9,8 +9,8 @@ info:
   title: IoT Data simulator websocket/STOMP API
   version: 1.0.0
   x-logo: 'https://avatars0.githubusercontent.com/u/16401334?v=4&s=200'
-termsOfService: !<tag:yaml.org,2002:js/undefined> ''
-externalDocs: !<tag:yaml.org,2002:js/undefined> ''
+termsOfService: ''
+externalDocs: {}
 
 ---
 # IoT Data simulator websocket/STOMP API
@@ -31,7 +31,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
   "@context": "http://schema.org/",
   "@type": "WebAPI",
 
-
+  "documentation": "",
 
   "name": "IoT Data simulator websocket/STOMP API"
 }

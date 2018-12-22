@@ -8,8 +8,8 @@ origin: >-
 info:
   title: Gitter Streaming API
   version: 1.0.0
-termsOfService: !<tag:yaml.org,2002:js/undefined> ''
-externalDocs: !<tag:yaml.org,2002:js/undefined> ''
+termsOfService: ''
+externalDocs: {}
 
 ---
 # Gitter Streaming API
@@ -30,7 +30,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
   "@context": "http://schema.org/",
   "@type": "WebAPI",
 
-
+  "documentation": "",
 
   "name": "Gitter Streaming API"
 }

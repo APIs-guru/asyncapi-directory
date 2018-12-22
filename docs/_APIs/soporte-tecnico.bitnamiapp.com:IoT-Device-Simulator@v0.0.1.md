@@ -12,8 +12,8 @@ info:
   license:
     name: Apache 2.0
     url: 'https://www.apache.org/licenses/LICENSE-2.0'
-termsOfService: !<tag:yaml.org,2002:js/undefined> ''
-externalDocs: !<tag:yaml.org,2002:js/undefined> ''
+termsOfService: ''
+externalDocs: {}
 
 ---
 # Scinap Sinapse API
@@ -36,7 +36,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
   "@context": "http://schema.org/",
   "@type": "WebAPI",
   "description": "The SCINAP API allows you to manage the Sinapse IoT HUB",
-
+  "documentation": "",
 
   "name": "Scinap Sinapse API"
 }

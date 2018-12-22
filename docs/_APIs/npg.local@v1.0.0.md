@@ -9,8 +9,8 @@ info:
   description: NPG server API
   title: NPG
   version: 1.0.0
-termsOfService: !<tag:yaml.org,2002:js/undefined> ''
-externalDocs: !<tag:yaml.org,2002:js/undefined> ''
+termsOfService: ''
+externalDocs: {}
 
 ---
 # NPG
@@ -33,7 +33,7 @@ externalDocs: !<tag:yaml.org,2002:js/undefined> ''
   "@context": "http://schema.org/",
   "@type": "WebAPI",
   "description": "NPG server API",
-
+  "documentation": "",
 
   "name": "NPG"
 }
