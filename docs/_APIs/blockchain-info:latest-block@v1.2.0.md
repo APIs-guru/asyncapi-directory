@@ -21,7 +21,6 @@ externalDocs: {}
 
 
 
-
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/blockchain-info%3Alatest-block%40v1.2.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/blockchain-info/blockchain-info-latest-block-stream-async.md)
 

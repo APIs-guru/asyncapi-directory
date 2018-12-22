@@ -21,7 +21,6 @@ externalDocs: {}
 
 
 
-
 * [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/meetup%3Anotifications%40v1.2.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/meetup/meetup-notifications-stream-async.md)
 
