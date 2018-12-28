@@ -19,7 +19,7 @@
 * [External documentation]({{ externalDocs.url }})
 {% endif %}
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/{{ slug | url_encode }}.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/{{ slug | url_encode }}.yaml)
 * [Download original / latest]({{ origin }})
 
 <script type="application/ld+json">
