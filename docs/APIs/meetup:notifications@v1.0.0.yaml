@@ -1,0 +1,19 @@
+x-collection-name: Meetup
+info:
+  title: Meetup
+  version: 1.0.0
+servers:
+  - url: api.meetup.com/notifications
+    scheme: https
+    variables:
+      fields:
+        description: >-
+          Request that additional fields (separated by commas) be included in
+          the output.
+stream:
+  framing:
+    type: chunked
+    delimiter: \r\n
+  read:
+    - {}
+asyncapi: 1.2.0

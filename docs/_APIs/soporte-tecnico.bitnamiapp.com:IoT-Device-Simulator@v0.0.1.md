@@ -2,6 +2,7 @@
 slug: 'soporte-tecnico.bitnamiapp.com:IoT-Device-Simulator@v0.0.1'
 name: Scinap Sinapse API
 service: IoT-Device-Simulator
+alpha: s
 layout: default
 origin: >-
   https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json
@@ -28,7 +29,7 @@ externalDocs: {}
 
 
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/soporte-tecnico.bitnamiapp.com%3AIoT-Device-Simulator%40v0.0.1.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/soporte-tecnico.bitnamiapp.com%3AIoT-Device-Simulator%40v0.0.1.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json)
 
 <script type="application/ld+json">

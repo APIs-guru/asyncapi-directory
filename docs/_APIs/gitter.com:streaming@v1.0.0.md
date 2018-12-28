@@ -2,6 +2,7 @@
 slug: 'gitter.com:streaming@v1.0.0'
 name: Gitter Streaming API
 service: streaming
+alpha: g
 layout: default
 origin: >-
   https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml
@@ -21,7 +22,7 @@ externalDocs: {}
 
 
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/gitter.com%3Astreaming%40v1.0.0.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/gitter.com%3Astreaming%40v1.0.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml)
 
 <script type="application/ld+json">

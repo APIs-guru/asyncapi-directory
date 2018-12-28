@@ -1,0 +1,58 @@
+x-collection-name: Meetup
+info:
+  title: Meetup
+  version: 1.0.0
+servers:
+  - url: api.meetup.com/find/groups
+    scheme: https
+    variables:
+      zip:
+        description: Zipcode of location to limit search to
+      country:
+        description: 'A valid two character country code, defaults to US'
+      upcoming_events:
+        description: >-
+          If true, filters text and category based searches on groups that have
+          upcoming events. Defaults to false
+      lon:
+        description: Approximate longitude
+      filter:
+        description: >-
+          Determines which groups are returned. If 'all' (default), the text and
+          category parameters are applied. If 'friends', groups your friends are
+          in are returned. The value of this parameter may be one of all,
+          friends
+      fallback_suggestions:
+        description: >-
+          boolean indicator of whether or not to return a list of curated
+          suggestions for groups if we can't find groups matching your criteria
+      location:
+        description: Raw text location query
+      text:
+        description: Raw full text search query
+      topic_id:
+        description: Comma-delimited list of numeric topic ids
+      radius:
+        description: >-
+          Radius in miles. May be 0.0-100.0, 'global' or 'smart', a dynamic
+          radius based on the number of active groups in the area. Defaults to
+          member's preferred radius
+      fields:
+        description: >-
+          Request that additional fields (separated by commas) be included in
+          the output.
+      category:
+        description: Comma-delimited list of numeric category ids
+      self_groups:
+        description: >-
+          set to 'include' or 'exclude' Meetups the authorized member belongs
+          to; default is 'include'
+      lat:
+        description: Approximate latitude
+stream:
+  framing:
+    type: chunked
+    delimiter: \r\n
+  read:
+    - {}
+asyncapi: 1.2.0

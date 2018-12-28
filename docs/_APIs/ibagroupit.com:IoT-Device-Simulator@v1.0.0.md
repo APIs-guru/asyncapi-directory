@@ -2,6 +2,7 @@
 slug: 'ibagroupit.com:IoT-Device-Simulator@v1.0.0'
 name: IoT Data simulator websocket/STOMP API
 service: IoT-Device-Simulator
+alpha: i
 layout: default
 origin: >-
   https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml
@@ -22,7 +23,7 @@ externalDocs: {}
 
 
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/ibagroupit.com%3AIoT-Device-Simulator%40v1.0.0.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/ibagroupit.com%3AIoT-Device-Simulator%40v1.0.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml)
 
 <script type="application/ld+json">

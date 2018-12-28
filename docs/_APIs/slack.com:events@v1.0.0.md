@@ -2,6 +2,7 @@
 slug: 'slack.com:events@v1.0.0'
 name: Slack Events API
 service: events
+alpha: s
 layout: default
 origin: >-
   https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
@@ -40,7 +41,7 @@ externalDocs:
 * [External documentation](https://api.slack.com/events-api)
 
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/slack.com%3Aevents%40v1.0.0.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/slack.com%3Aevents%40v1.0.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json)
 
 <script type="application/ld+json">

@@ -32,6 +32,7 @@ function fixApi(api) {
         api.asyncapi = api.version;
         delete api.version;
     }
+    if (api.info.version === '1.2.0') api.info.version = '1.0.0';
     recurse(api,{},function(obj,key,state){
         if (key === 'asyncapi_servers_variables') {
             obj.variables = obj[key];
@@ -71,7 +72,7 @@ async function main() {
 
                         fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
 
-                        const header = { slug: filename, name: info.title, service: service, layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{} };
+                        const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{} };
                         const markdown = await engine.parseAndRender(templateStr, header);
                         const output = '---\n'+yaml.dump(header)+'\n---\n'+markdown;
                         fs.writeFile('./docs/_APIs/'+filename+'.md',output,'utf8',function(err){ if (err) console.warn(err.message) });

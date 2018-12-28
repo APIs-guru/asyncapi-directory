@@ -2,6 +2,7 @@
 slug: npg.local@v1.0.0
 name: NPG
 service: default
+alpha: 'n'
 layout: default
 origin: >-
   https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json
@@ -24,7 +25,7 @@ externalDocs: {}
 
 
 
-* [Download document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/npg.local%40v1.0.0.yaml)
+* [Download validated document from APIs.guru](https://raw.githubusercontent.com/APIs-guru/asyncapi-directory/master/docs/APIs/npg.local%40v1.0.0.yaml)
 * [Download original / latest](https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json)
 
 <script type="application/ld+json">
