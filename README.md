@@ -1,6 +1,6 @@
 # asyncapi-directory
 
-Directory of asynchronous API specifications in AsyncAPI format
+Directory of asynchronous API specifications in [AsyncAPI](https://www.asyncapi.com/) format
 
 ## The APIs
 
