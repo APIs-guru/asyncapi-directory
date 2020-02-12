@@ -1,6 +1,6 @@
 # About AsyncAPI-Directory and APIs.guru
 
-Our goal is to create the most comprehensive, standards-compliant and up-to-date directory of machine-readable AsyncAPI definitions with the following principles:
+Our goal is to create the most comprehensive, standards-compliant and up-to-date directory of machine-readable [AsyncAPI](https://www.asyncapi.org/) definitions with the following principles:
 - Open source, community driven project.
 - Only publicly available APIs (free or paid).
 - Anyone can add or change an API, not only API owners.
