@@ -27,7 +27,7 @@
   "dependencies": {
     "asyncapi": "^2.1.0",
     "asyncapi-docgen": "^1.10.6",
-    "js-yaml": "^3.12.0",
+    "js-yaml": "^3.13.1",
     "liquid-node": "^3.0.0",
     "node-fetch": "^2.3.0",
     "node-readfiles": "^0.2.0",
