@@ -10,7 +10,7 @@ script:
   - cd docs
   - bundle exec jekyll doctor
   - cd ..
-  - bundle exec jekyll build --source docs --destination docs/_site
+  - bundle exec jekyll build -V --source docs --destination docs/_site
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
