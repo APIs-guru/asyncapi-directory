@@ -1,4 +1,7 @@
 theme: jekyll-theme-architect
+url: https://apis.guru
+site:
+  url: https://apis.guru
 show_downloads: true
 collections_dir: /
 collections:
