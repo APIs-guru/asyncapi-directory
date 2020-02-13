@@ -12,3 +12,4 @@ collections:
     slug: apis
     name: APIs
     hidden: false
+    permalink: '/:collection/:name/'
