@@ -5,7 +5,7 @@ slack.com:
 gitter.com:
   streaming:
     origin: >-
-      https://raw.githubusercontent.com/asyncapi/asyncapi/master/test/docs/gitter-streaming.yml
+      https://raw.githubusercontent.com/asyncapi/asyncapi/master/examples/1.2.0/gitter-streaming.yml
 npg.local:
   default:
     origin: >-
