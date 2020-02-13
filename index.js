@@ -43,7 +43,7 @@ function fixApi(api) {
                 const found = jptr(api,obj[key]);
                 if (found === false) {
                     console.warn('Not found',obj[key]);
-                    delete obj.$ref;
+                    jptr(api,obj[key],{});
                 }
             }
         }
@@ -68,7 +68,7 @@ async function main() {
                     if (obj && obj.asyncapi && obj.info && obj.info.version) {
                         info = obj.info;
                         console.log('   @v'+info.version,info.title);
-                        const filename = api + (service === 'default' ? '' : ':'+service) + '@v' + info.version;
+                        const filename = api + (service === 'default' ? '' : '+'+service) + '@v' + info.version;
 
                         fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
 

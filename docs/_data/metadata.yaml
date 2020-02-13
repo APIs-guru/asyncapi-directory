@@ -222,10 +222,10 @@ github:
   get-users-username-orgs:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-users-username-orgs-stream-async.md
-gitter:
-  streaming:
-    origin: >-
-      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gitter/gitter-streaming-api-async.md
+#gitter:
+#  streaming:
+#    origin: >-
+#      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/gitter/gitter-streaming-api-async.md
 gmail:
   get-history:
     origin: >-
@@ -484,10 +484,10 @@ sendgrid:
   get-suppression-bounces:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-suppression-bounces-stream-async.md
-slack:
-  real-time-messaging:
-    origin: >-
-      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/slack/slack-real-time-messaging-api-async.md
+#slack:
+#  real-time-messaging:
+#    origin: >-
+#      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/slack/slack-real-time-messaging-api-async.md
 spotify:
   get-albums:
     origin: >-
