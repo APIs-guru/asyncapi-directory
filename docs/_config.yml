@@ -1,5 +1,6 @@
 theme: jekyll-theme-architect
 url: https://apis.guru
+baseurl: /asyncapi-directory
 site:
   url: https://apis.guru
 show_downloads: true
