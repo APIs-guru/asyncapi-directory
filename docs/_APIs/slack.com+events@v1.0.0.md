@@ -19,7 +19,7 @@ termsOfService: ''
 externalDocs:
   description: Slack Events API documentation
   url: 'https://api.slack.com/events-api'
-stub: !<tag:yaml.org,2002:js/undefined> ''
+stub: false
 
 ---
 # Slack Events API
