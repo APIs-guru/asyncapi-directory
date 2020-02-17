@@ -1,5 +1,6 @@
 *.bak
 secrets.txt
+checkpages.sh
 
 # Logs
 logs

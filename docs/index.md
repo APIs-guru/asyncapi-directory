@@ -4,7 +4,7 @@ Our goal is to create the most comprehensive, standards-compliant and up-to-date
 - Open source, community driven project.
 - Only publicly available APIs (free or paid).
 - Anyone can add or change an API, not only API owners.
-- All data can be accessed through an AsyncAPI-defined asynchronous API.
+- All data can be accessed through a simple REST API returning JSON.
 
 If you want to reference this project and you need an icon or even a banner, check our [branding guide](https://github.com/APIs-guru/branding).
 
