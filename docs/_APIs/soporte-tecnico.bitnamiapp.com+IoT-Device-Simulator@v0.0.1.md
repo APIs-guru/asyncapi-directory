@@ -15,7 +15,7 @@ info:
     url: 'https://www.apache.org/licenses/LICENSE-2.0'
 termsOfService: ''
 externalDocs: {}
-stub: !<tag:yaml.org,2002:js/undefined> ''
+stub: false
 
 ---
 # Scinap Sinapse API
