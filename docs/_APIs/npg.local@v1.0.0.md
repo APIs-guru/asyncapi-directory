@@ -12,6 +12,7 @@ info:
   version: 1.0.0
 termsOfService: ''
 externalDocs: {}
+stub: !<tag:yaml.org,2002:js/undefined> ''
 
 ---
 # NPG

@@ -14,6 +14,7 @@ info:
     using Streamdata.io.
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # New York Times Most Shared by Section & Time Period (stream)

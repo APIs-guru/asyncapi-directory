@@ -72,7 +72,7 @@ async function main() {
 
                         fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
 
-                        const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{} };
+                        const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{}, stub: metadata[api][service].stub };
                         const markdown = await engine.parseAndRender(templateStr, header);
                         const output = '---\n'+yaml.dump(header)+'\n---\n'+markdown;
                         fs.writeFile('./docs/_APIs/'+filename+'.md',output,'utf8',function(err){ if (err) console.warn(err.message) });
@@ -82,7 +82,7 @@ async function main() {
                             fs.writeFile('./docs/html/'+filename+'.html',html,'utf8',function(err){ if (err) console.warn(err.message) });
                         }
                         catch (ex) {
-                            console.warn(ex.message);
+                            console.warn('docs',ex.message);
                         }
                     }
                     else console.warn(util.inspect(obj));

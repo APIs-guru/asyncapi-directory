@@ -14,6 +14,7 @@ info:
     Streamdata.io.
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # Meetup RSVPs v2 (stream)

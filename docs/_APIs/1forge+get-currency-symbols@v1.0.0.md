@@ -14,6 +14,7 @@ info:
     Streamdata.io.
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # 1Forge Get Currency Symbols API (stream)

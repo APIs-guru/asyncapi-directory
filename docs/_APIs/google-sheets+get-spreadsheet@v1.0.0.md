@@ -14,6 +14,7 @@ info:
     using Streamdata.io.
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # Google Sheets Get Spreadsheet (stream)

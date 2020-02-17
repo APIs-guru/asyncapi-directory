@@ -14,6 +14,7 @@ info:
     using Streamdata.io.
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # New York Times Most Emailed by Section & Time Period (stream)

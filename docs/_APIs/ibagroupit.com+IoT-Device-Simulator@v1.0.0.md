@@ -12,6 +12,7 @@ info:
   x-logo: 'https://avatars0.githubusercontent.com/u/16401334?v=4&s=200'
 termsOfService: ''
 externalDocs: {}
+stub: !<tag:yaml.org,2002:js/undefined> ''
 
 ---
 # IoT Data simulator websocket/STOMP API

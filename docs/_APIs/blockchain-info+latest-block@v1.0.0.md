@@ -11,6 +11,7 @@ info:
   version: 1.0.0
 termsOfService: ''
 externalDocs: {}
+stub: true
 
 ---
 # Blockchain Info
