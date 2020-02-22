@@ -4,7 +4,7 @@ Our goal is to create the most comprehensive, standards-compliant and up-to-date
 - Open source, community driven project.
 - Only publicly available APIs (free or paid).
 - Anyone can add or change an API, not only API owners.
-- All data can be accessed through an AsyncAPI-defined asynchronous API.
+- All data can be accessed through a simple REST API returning JSON.
 
 If you want to reference this project and you need an icon or even a banner, check our [branding guide](https://github.com/APIs-guru/branding).
 
@@ -18,10 +18,11 @@ You can contact us at founders@apis.guru / mike.ralphson@gmail.com
 ## The APIs
 
 * [Browse the APIs](APIs)
+* [StreamData stubs](stubs)
 * [REST API](rest/v1/apis.json)
 * [RSS feed](rss/feed.xml)
 
-Many of the API definitions come from the [https://streamdata.io](StreamData.IO) [API Gallery](https://github.com/streamdata-gallery-master/streamrank) under the terms of the CC-BY-NC-SA/3.0 license.
+'Stub' API definitions come from the [https://streamdata.io](StreamData.IO) [API Gallery](https://github.com/streamdata-gallery-master/streamrank) under the terms of the CC-BY-NC-SA/3.0 license.
 
 ## Last updated
 
