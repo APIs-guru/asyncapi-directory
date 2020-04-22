@@ -789,3 +789,6 @@ twitter:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-show-timelines-status-stream-async.md
     stub: true
+jukeberry:
+  asyncapiconfdemo:
+    origin: https://raw.githubusercontent.com/Jukeberry/node-player/master/asyncapi.yaml
