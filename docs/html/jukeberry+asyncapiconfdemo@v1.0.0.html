@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>Jukeberry 1.0.0 documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="relative md:flex lg:flex xl:flex">
+    
+
+<input id="burger-menu" type="checkbox" />
+<label for="burger-menu" class="shadow">
+  <div class="wrapper">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</label>
+<div class="sidebar-panel fixed pin-t pin-l pin-b w-64 bg-grey-lighter font-sans pt-8 pr-4 pb-4 pl-4">
+  <div class="sidebar-panel__content">
+    
+    <h1 class="text-2xl font-thin">Jukeberry 1.0.0</h1>
+    
+    <ul class="text-sm mt-10 list-reset mt-2">
+      <li class="mb-3">
+        <a class="js-menu-item text-grey-darkest no-underline" href="#introduction">Introduction</a>
+      </li>
+      
+      <li class="mb-3">
+        <a class="js-menu-item text-grey-darkest no-underline" href="#servers">Servers</a>
+      </li>
+      
+    </ul>
+    
+    <h2 class="text-xs uppercase text-grey mt-10 mb-4 font-thin">Operations</h2>
+    <ul class="text-sm list-reset mt-2">
+      
+      <!-- With tags in sidebar -->
+      
+
+      
+      <!-- Untagged operations -->
+      <div class="mt-4 ">
+        <div class="js-prop cursor-pointer py-2 flex property">
+          <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+            <span class="text-sm" style="word-break: break-word;text-transform: capitalize;">Untagged</span>
+            <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+              <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+            </svg>
+          </div>
+        </div>
+        <div class="children">
+          
+          
+          <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+            href="#operation-publish-card/presented">
+            <span class="bg-blue-dark font-bold h-6 no-underline text-white uppercase p-1 mr-2 rounded"
+              style="height: 21px;font-size: 11px;" title="Publish">Pub</span>
+            
+            <span style="padding-top: 2px;">
+              Inform when a card has been read
+            </span>
+            
+          </a>
+          
+          
+          
+          
+          <a class="js-menu-item flex break-words no-underline text-grey-darkest mt-8 sm:mt-8 md:mt-3"
+            href="#operation-publish-stop/pushed">
+            <span class="bg-blue-dark font-bold h-6 no-underline text-white uppercase p-1 mr-2 rounded"
+              style="height: 21px;font-size: 11px;" title="Publish">Pub</span>
+            
+            <span style="padding-top: 2px;">
+              Inform when the stop button was pushed
+            </span>
+            
+          </a>
+          
+          
+          
+        </div>
+      </div>
+      
+
+      
+    
+  </div>
+</div>
+
+    <div class="content-panel flex-1 leading-loose z-10">
+      <div class="center-block p-8">
+  <a name="introduction"></a>
+  <h1>Jukeberry 1.0.0</h1>
+  <div class="leading-normal mb-4">
+    
+    
+      <a class="border border-solid border-orange-lighter hover:bg-orange-lighter hover:text-orange-dark font-bold no-underline text-orange text-xs uppercase rounded mr-2 px-3 py-1"
+        href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2.0</a>
+    
+  </div>
+
+  <div class="markdown">
+    <p>Jukeberry lets you select music from a group of RFID cards and play it on any device listening the proper events</p>
+
+  </div>
+
+
+  <div class="leading-normal mb-4">
+    
+  </div>
+</div>
+
+
+
+<a name="servers"></a>
+<div class="center-block p-8">
+
+  <h2 class="mb-4">Servers</h2>
+
+  
+    <div class="shadow bg-grey-lighter mb-3 px-4 py-3">
+      <div class="flex">
+        <div>
+          <div class="pr-4 font-mono">
+            
+<span class="string-chunk" >tcp:</span><span class="string-chunk" >/</span><span class="string-chunk" >/mr1nljqp0y1g2d</span><span class="string-chunk" >.messaging</span><span class="string-chunk" >.solace</span><span class="string-chunk" >.cloud:21128</span>
+
+
+            
+            <span class="bg-teal font-sans font-bold no-underline text-white uppercase rounded ml-2"
+              style="height: 20px;font-size: 11px;padding: 3px;">mqtt</span>
+            
+          </div>
+          <div class="text-xs text-grey-dark">
+            
+          </div>
+        </div>
+      </div>
+
+      
+        <div>
+          
+        </div>
+      
+
+      
+    </div>
+  
+
+</div>
+
+
+
+
+
+<a name="operations"></a>
+<h2 class="mb-4 ml-8">Operations</h2>
+
+
+  <div class="responsive-container">
+    
+      
+
+<a name="operation-publish-card/presented"></a>
+<div class="center-block p-8">
+  <div class="operation pt-8 pb-8">
+    <h3 class="font-mono text-base">
+      
+      <span class="font-mono border border-blue text-blue uppercase p-1 rounded" title="Publish">Pub</span>
+      
+      
+      
+<span class="string-chunk" >card</span><span class="string-chunk" >/presented</span>
+
+    </h3>
+
+    <div class="mt-4 mb-4 markdown"></div>
+
+    <p class="text-grey text-sm">Inform when a card has been read</p>
+    <div class="mt-4 mb-4 markdown"></div>
+
+
+
+    
+
+
+    
+    <p>Accepts the following message:</p>
+    
+
+<div class="bg-grey-lighter rounded p-4 mt-2">
+  <div class="text-sm text-grey-darker mb-2">
+    
+    
+      
+    
+  </div>
+  <p class="text-grey-dark text-sm"></p>
+  
+  
+
+<div class="mt-4">
+  
+</div>
+
+
+
+
+  <div class="mt-4 mb-4 markdown"></div>
+  
+<div>
+  
+
+<div class="bg-grey-lighter  rounded">
+  <div class="is-open">
+    <div class="js-prop cursor-pointer py-2 flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">Payload</span>
+        
+        <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+          xmlns="http://www.w3.org/2000/svg" y="0">
+          <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+        </svg>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+object
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+      <div class="children bg-grey-lightest py-4 rounded">
+        
+          
+            
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">id</span>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+integer
+          
+          
+          
+          <div class="inline-block">
+            
+            
+              <span class="bg-purple-dark font-bold no-underline text-white rounded lowercase ml-2"
+                style="height: 20px;font-size: 11px;padding: 3px;" title="At least 0">>= 0</span>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+          <div class="text-sm markdown"><p>Id of read card.</p>
+</div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+          
+            
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">text</span>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+          <div class="text-sm markdown"><p>The card might have any text description.</p>
+</div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+          
+            
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">sentAt</span>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+              <span class="bg-yellow-dark font-bold no-underline text-black rounded lowercase ml-2"
+                style="height: 20px;font-size: 11px;padding: 3px;">date-time</span>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+          <div class="text-sm markdown"><p>Date and time when the message was sent.</p>
+</div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+          
+        
+
+        
+        
+
+        
+
+        
+          
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are allowed.</p>
+          
+        
+
+        
+
+        
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+</div>
+
+  
+</div>
+
+
+    
+
+    
+
+<div class="mt-4">
+  
+</div>
+
+
+
+  </div>
+</div>
+
+<div class="right-block p-8">
+  <h4 class="text-lg text-white mb-4">Examples</h4>
+
+  
+  
+
+<form>
+  <input type="radio" checked id="example-payload-card/presented-&lt;anonymous-message-1&gt;" name="tab" class="examples-payload-tab hidden" />
+  <label for="example-payload-card/presented-&lt;anonymous-message-1&gt;" class="py-1 px-2 mr-2 mb-4 text-grey-lightest text-sm border rounded focus:outline-none cursor-pointer text-grey-lightest" >Payload</label>
+
+  <input type="radio" id="example-headers-card/presented-&lt;anonymous-message-1&gt;" name="tab" class="examples-headers-tab hidden" disabled />
+  <label for="example-headers-card/presented-&lt;anonymous-message-1&gt;"
+      class="py-1 px-2 mr-2 mb-4 text-sm border rounded focus:outline-none cursor-pointer text-grey-dark border-grey-dark opacity-25" title="This message does not have headers">Headers</label>
+
+  <div class="payload-examples mt-4">
+    
+    <pre class="hljs mb-4 border border-grey-darkest rounded"><code>{
+  "id": 0,
+  "text": "string",
+  "sentAt": "2020-04-22T14:18:22Z"
+}</code></pre>
+    <h6 class="text-xs font-bold text-grey-darker italic">This example has been generated automatically.</h6>
+    
+  </div>
+
+  <div class="headers-examples mt-4">
+    
+  </div>
+</form>
+
+
+  
+</div>
+
+
+
+    
+  </div>
+  <div class="responsive-container">
+    
+  </div>
+
+  <div class="responsive-container">
+    
+      
+
+<a name="operation-publish-stop/pushed"></a>
+<div class="center-block p-8">
+  <div class="operation pt-8 pb-8">
+    <h3 class="font-mono text-base">
+      
+      <span class="font-mono border border-blue text-blue uppercase p-1 rounded" title="Publish">Pub</span>
+      
+      
+      
+<span class="string-chunk" >stop</span><span class="string-chunk" >/pushed</span>
+
+    </h3>
+
+    <div class="mt-4 mb-4 markdown"></div>
+
+    <p class="text-grey text-sm">Inform when the stop button was pushed</p>
+    <div class="mt-4 mb-4 markdown"></div>
+
+
+
+    
+
+
+    
+    <p>Accepts the following message:</p>
+    
+
+<div class="bg-grey-lighter rounded p-4 mt-2">
+  <div class="text-sm text-grey-darker mb-2">
+    
+    
+      
+    
+  </div>
+  <p class="text-grey-dark text-sm"></p>
+  
+  
+
+<div class="mt-4">
+  
+</div>
+
+
+
+
+  <div class="mt-4 mb-4 markdown"></div>
+  
+<div>
+  
+
+<div class="bg-grey-lighter  rounded">
+  <div class="is-open">
+    <div class="js-prop cursor-pointer py-2 flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">Payload</span>
+        
+        <svg class="expand" version="1.1" viewBox="0 0 24 24" x="0"
+          xmlns="http://www.w3.org/2000/svg" y="0">
+          <polygon points="17.3 8.3 12 13.6 6.7 8.3 5.3 9.7 12 16.4 18.7 9.7 "></polygon>
+        </svg>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+object
+          
+          
+          
+          <div class="inline-block">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+      <div class="children bg-grey-lightest py-4 rounded">
+        
+          
+            
+
+<div class="bg-grey-lightest pl-8 pr-8 rounded">
+  <div class="">
+    <div class=" flex property">
+      <div class="pr-4" style="margin-top:-2px; min-width: 25%;">
+        <span class="text-sm " style="word-break: break-word;">sentAt</span>
+        
+        
+      </div>
+
+      <div>
+        <div class="capitalize text-sm text-teal font-bold">
+          
+string
+          
+          
+          
+          <div class="inline-block">
+            
+              <span class="bg-yellow-dark font-bold no-underline text-black rounded lowercase ml-2"
+                style="height: 20px;font-size: 11px;padding: 3px;">date-time</span>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          </div>
+        </div>
+
+        
+          <div class="text-sm markdown"><p>Date and time when the message was sent</p>
+</div>
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+
+          
+        
+
+        
+        
+
+        
+
+        
+          
+            <p class="pl-6 mb-2 mt-4 text-xs text-grey-darker">Additional properties are allowed.</p>
+          
+        
+
+        
+
+        
+
+        
+      </div>
+    
+  </div>
+</div>
+
+
+</div>
+
+  
+</div>
+
+
+    
+
+    
+
+<div class="mt-4">
+  
+</div>
+
+
+
+  </div>
+</div>
+
+<div class="right-block p-8">
+  <h4 class="text-lg text-white mb-4">Examples</h4>
+
+  
+  
+
+<form>
+  <input type="radio" checked id="example-payload-stop/pushed-&lt;anonymous-message-2&gt;" name="tab" class="examples-payload-tab hidden" />
+  <label for="example-payload-stop/pushed-&lt;anonymous-message-2&gt;" class="py-1 px-2 mr-2 mb-4 text-grey-lightest text-sm border rounded focus:outline-none cursor-pointer text-grey-lightest" >Payload</label>
+
+  <input type="radio" id="example-headers-stop/pushed-&lt;anonymous-message-2&gt;" name="tab" class="examples-headers-tab hidden" disabled />
+  <label for="example-headers-stop/pushed-&lt;anonymous-message-2&gt;"
+      class="py-1 px-2 mr-2 mb-4 text-sm border rounded focus:outline-none cursor-pointer text-grey-dark border-grey-dark opacity-25" title="This message does not have headers">Headers</label>
+
+  <div class="payload-examples mt-4">
+    
+    <pre class="hljs mb-4 border border-grey-darkest rounded"><code>{
+  "sentAt": "2020-04-22T14:18:22Z"
+}</code></pre>
+    <h6 class="text-xs font-bold text-grey-darker italic">This example has been generated automatically.</h6>
+    
+  </div>
+
+  <div class="headers-examples mt-4">
+    
+  </div>
+</form>
+
+
+  
+</div>
+
+
+
+    
+  </div>
+  <div class="responsive-container">
+    
+  </div>
+
+
+
+
+    </div>
+    <div class="examples-panel absolute pin-t pin-r pin-b"></div>
+  </div>
+  <script src="js/highlight.min.js" type="application/javascript"></script>
+  <script src="js/main.js" type="application/javascript"></script>
+</body>
+</html>

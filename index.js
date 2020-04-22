@@ -3,6 +3,7 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const util = require('util');
 
 const fetch = require('node-fetch');
@@ -12,6 +13,14 @@ const recurse = require('reftools/lib/recurse').recurse;
 const jptr = require('reftools/lib/jptr').jptr;
 const engine = new liquid.Engine();
 const docs = require('asyncapi-docgen');
+const Generator = require('@asyncapi/generator');
+const doc2 = new Generator('@asyncapi/html-template', path.resolve(__dirname, 'docs', 'html'), {
+  output: 'fs',
+  forceWrite: true,
+  templateParams: {
+    sidebarOrganization: 'byTags'
+  }
+});
 
 const metadata = yaml.safeLoad(fs.readFileSync('./docs/_data/metadata.yaml','utf8'),{json:true});
 const templateStr = fs.readFileSync('./templates/api.liquid.md','utf8');
@@ -78,11 +87,19 @@ async function main() {
                         fs.writeFile('./docs/_APIs/'+filename+'.md',output,'utf8',function(err){ if (err) console.warn(err.message) });
 
                         try {
-                            const html = await docs.generateFullHTML(str);
-                            fs.writeFile('./docs/html/'+filename+'.html',html,'utf8',function(err){ if (err) console.warn(err.message) });
+                            let html;
+                            if (obj.asyncapi.startsWith('1.')) {
+                                html = await docs.generateFullHTML(str);
+                                html = html.replace('main.css','main1.css');
+                                fs.writeFile('./docs/html/'+filename+'.html',html,'utf8',function(err){ if (err) console.warn(err.message) });
+                            }
+                            else if (obj.asyncapi.startsWith('2.')) {
+                                await doc2.generateFromString(str);
+                                fs.renameFileSync('./docs/html/index.html','./docs/html/'+filename+'.html');
+                            }
                         }
                         catch (ex) {
-                            console.warn('docs',ex.message);
+                            console.warn('docs',ex.message||ex);
                         }
                     }
                     else console.warn(util.inspect(obj));
