@@ -7,11 +7,9 @@ const path = require('path');
 const util = require('util');
 
 const fetch = require('node-fetch');
-const liquid = require('liquid-node');
 const yaml = require('js-yaml');
 const recurse = require('reftools/lib/recurse').recurse;
 const jptr = require('reftools/lib/jptr').jptr;
-const engine = new liquid.Engine();
 const docs = require('asyncapi-docgen');
 const Generator = require('@asyncapi/generator');
 const doc2 = new Generator('@asyncapi/html-template', path.resolve(__dirname, 'docs', 'html'), {
@@ -23,13 +21,6 @@ const doc2 = new Generator('@asyncapi/html-template', path.resolve(__dirname, 'd
 });
 
 const metadata = yaml.safeLoad(fs.readFileSync('./docs/_data/metadata.yaml','utf8'),{json:true});
-const templateStr = fs.readFileSync('./templates/api.liquid.md','utf8');
-
-engine.registerFilters({
-  "url_encode": function(input) {
-    return encodeURIComponent(input);
-  }
-});
 
 function fixStr(str) {
     str = str.split('\r\n').join('\n').split('\r').join('').split('---').join('###');
@@ -81,10 +72,8 @@ async function main() {
 
                         fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
 
-                        const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'default', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{}, stub: metadata[api][service].stub || false };
-                        const markdown = await engine.parseAndRender(templateStr, header);
-                        const output = '---\n'+yaml.dump(header)+'\n---\n'+markdown;
-                        fs.writeFile('./docs/_APIs/'+filename+'.md',output,'utf8',function(err){ if (err) console.warn(err.message) });
+                        const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'api', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{}, stub: metadata[api][service].stub || false, tags: 'api' };
+                        fs.writeFileSync('APIs/'+filename+'.md','---\n'+yaml.safeDump(header)+'\n---\n','utf8');
 
                         try {
                             let html;

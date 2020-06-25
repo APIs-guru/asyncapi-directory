@@ -2,15 +2,8 @@ language: node_js
 node_js:
   - "lts/*"
 script:
-  - node index.js
-  - rvm install 2.3
-  - rvm use 2.3
-  - gem install bundler -v '2.0.1'
-  - bundle install
-  - cd docs
-  - bundle exec jekyll doctor
-  - cd ..
-  - bundle exec jekyll build -V --source docs --destination docs/_site
+  - npm run build.data
+  - npm run build.site
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN

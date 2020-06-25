@@ -1,0 +1,12 @@
+---
+permalink: /rest/v1/apis.json
+---
+[
+    {% for api in collections.api %}{% assign data = api.data %}{
+      "name": "{{ data.name }}",
+      "service": "{{ data.service }}",
+      "slug": "{{ data.slug }}",
+      "url": "{{ data.page.url }}"
+    }{% unless forloop.last %},{% endunless %}
+{% endfor  %}]
+

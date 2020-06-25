@@ -1,0 +1,22 @@
+---
+permalink: /rss/feed.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title | xml_escape }}</title>
+    <description>{{ site.description | xml_escape }}</description>
+    <link>{{ page.url }}</link>
+    <atom:link href="{{ page.url }}" rel="self" type="application/rss+xml" />
+    {% for api in collections.api %}
+      <item>
+        <title>{{ api.data.name | xml_escape }}</title>
+        <description>{{ api.data.description | xml_escape }}</description>
+        <category>AsyncAPI</category>
+        <pubDate>{% if api.data.updated %}{{ api.data.updated | date: "%a, %d %b %Y %H:%M:%S %z" }}{% else %}{{ 'now' | date: "%a, %d %b %Y %H:%M:%S %z" }}{% endif %}</pubDate>
+        <link>{{api.data.page.url}}</link>
+        <guid isPermaLink="true">{{api.data.url}}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
