@@ -17,4 +17,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("markdown", function(value) {
     return md.render(value);
   });
+  return {
+    pathPrefix: "/asyncapi-directory/"
+  }
 };
