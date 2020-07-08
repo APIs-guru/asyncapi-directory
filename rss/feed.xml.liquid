@@ -10,8 +10,8 @@ permalink: /rss/feed.xml
     <atom:link href="{{ page.url }}" rel="self" type="application/rss+xml" />
     {% for api in collections.api %}
       <item>
-        <title>{{ api.data.name | xml_escape }}</title>
-        <description>{{ api.data.description | xml_escape }}</description>
+        <title>{{ api.data.name | escape }}</title>
+        <description>{{ api.data.description | escape }}</description>
         <category>AsyncAPI</category>
         <pubDate>{% if api.data.updated %}{{ api.data.updated | date: "%a, %d %b %Y %H:%M:%S %z" }}{% else %}{{ 'now' | date: "%a, %d %b %Y %H:%M:%S %z" }}{% endif %}</pubDate>
         <link>{{api.data.page.url}}</link>
