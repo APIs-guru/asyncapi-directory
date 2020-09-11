@@ -36,7 +36,7 @@
     "js-yaml": "^3.13.1",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "node-readfiles": "^0.2.0",
     "reftools": "^1.1.1"
   }
