@@ -72,12 +72,6 @@
       "url": "/APIs/box+pending-collaborations@v1.0.0/"
     },
 {
-      "name": "Box User Events, Enterprise Events (stream)",
-      "service": "user-events-enterprise-events",
-      "slug": "box+user-events-enterprise-events@v1.0.0",
-      "url": "/APIs/box+user-events-enterprise-events@v1.0.0/"
-    },
-{
       "name": "Disqus Categories List (stream)",
       "service": "categories-list",
       "slug": "disqus+categories-list@v1.0.0",
@@ -384,12 +378,6 @@
       "url": "/APIs/github+get-users-username-orgs@v1.0.0/"
     },
 {
-      "name": "Gitter Streaming API",
-      "service": "streaming",
-      "slug": "gitter.com+streaming@v1.0.0",
-      "url": "/APIs/gitter.com+streaming@v1.0.0/"
-    },
-{
       "name": "Gmail Get History (stream)",
       "service": "get-history",
       "slug": "gmail+get-history@v1.0.0",
@@ -418,12 +406,6 @@
       "service": "get-spreadsheet",
       "slug": "google-sheets+get-spreadsheet@v1.0.0",
       "url": "/APIs/google-sheets+get-spreadsheet@v1.0.0/"
-    },
-{
-      "name": "IoT Data simulator websocket/STOMP API",
-      "service": "IoT-Device-Simulator",
-      "slug": "ibagroupit.com+IoT-Device-Simulator@v1.0.0",
-      "url": "/APIs/ibagroupit.com+IoT-Device-Simulator@v1.0.0/"
     },
 {
       "name": "IEX Auction (stream)",
@@ -564,22 +546,16 @@
       "url": "/APIs/intrinio+securities@v1.0.0/"
     },
 {
-      "name": "Jukeberry",
-      "service": "asyncapiconfdemo",
-      "slug": "jukeberry+asyncapiconfdemo@v1.0.0",
-      "url": "/APIs/jukeberry+asyncapiconfdemo@v1.0.0/"
+      "name": "LinkedIn Get Companies (stream)",
+      "service": "get-companies",
+      "slug": "linkedin+get-companies@v1.0.0",
+      "url": "/APIs/linkedin+get-companies@v1.0.0/"
     },
 {
       "name": "LinkedIn Get Companies Updates (stream)",
       "service": "get-companies-updates",
       "slug": "linkedin+get-companies-updates@v1.0.0",
       "url": "/APIs/linkedin+get-companies-updates@v1.0.0/"
-    },
-{
-      "name": "LinkedIn Get Companies (stream)",
-      "service": "get-companies",
-      "slug": "linkedin+get-companies@v1.0.0",
-      "url": "/APIs/linkedin+get-companies@v1.0.0/"
     },
 {
       "name": "LinkedIn Get People (stream)",
@@ -606,16 +582,16 @@
       "url": "/APIs/meetup+cities@v1.0.0/"
     },
 {
-      "name": "Meetup Comments v2 (stream)",
-      "service": "comments-v2",
-      "slug": "meetup+comments-v2@v1.0.0",
-      "url": "/APIs/meetup+comments-v2@v1.0.0/"
-    },
-{
       "name": "Meetup Comments (stream)",
       "service": "comments",
       "slug": "meetup+comments@v1.0.0",
       "url": "/APIs/meetup+comments@v1.0.0/"
+    },
+{
+      "name": "Meetup Comments v2 (stream)",
+      "service": "comments-v2",
+      "slug": "meetup+comments-v2@v1.0.0",
+      "url": "/APIs/meetup+comments-v2@v1.0.0/"
     },
 {
       "name": "Meetup Concierge (stream)",
@@ -768,12 +744,6 @@
       "url": "/APIs/news-api+top-headlines@v1.0.0/"
     },
 {
-      "name": "NPG",
-      "service": "default",
-      "slug": "npg.local@v1.0.0",
-      "url": "/APIs/npg.local@v1.0.0/"
-    },
-{
       "name": "Pinboard Get All Posts (stream)",
       "service": "get-all-posts",
       "slug": "pinboard+get-all-posts@v1.0.0",
@@ -898,18 +868,6 @@
       "service": "get-suppression-bounces",
       "slug": "sendgrid+get-suppression-bounces@v1.0.0",
       "url": "/APIs/sendgrid+get-suppression-bounces@v1.0.0/"
-    },
-{
-      "name": "Slack Events API",
-      "service": "events",
-      "slug": "slack.com+events@v1.0.0",
-      "url": "/APIs/slack.com+events@v1.0.0/"
-    },
-{
-      "name": "Scinap Sinapse API",
-      "service": "IoT-Device-Simulator",
-      "slug": "soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1",
-      "url": "/APIs/soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1/"
     },
 {
       "name": "Spotify Get Albums (stream)",
@@ -1144,6 +1102,48 @@
       "service": "show-timelines-status",
       "slug": "twitter+show-timelines-status@v1.0.0",
       "url": "/APIs/twitter+show-timelines-status@v1.0.0/"
+    },
+{
+      "name": "Box User Events, Enterprise Events (stream)",
+      "service": "user-events-enterprise-events",
+      "slug": "box+user-events-enterprise-events@v1.0.0",
+      "url": "/APIs/box+user-events-enterprise-events@v1.0.0/"
+    },
+{
+      "name": "Slack Events API",
+      "service": "events",
+      "slug": "slack.com+events@v1.0.0",
+      "url": "/APIs/slack.com+events@v1.0.0/"
+    },
+{
+      "name": "IoT Data simulator websocket/STOMP API",
+      "service": "IoT-Device-Simulator",
+      "slug": "ibagroupit.com+IoT-Device-Simulator@v1.0.0",
+      "url": "/APIs/ibagroupit.com+IoT-Device-Simulator@v1.0.0/"
+    },
+{
+      "name": "NPG",
+      "service": "default",
+      "slug": "npg.local@v1.0.0",
+      "url": "/APIs/npg.local@v1.0.0/"
+    },
+{
+      "name": "Scinap Sinapse API",
+      "service": "IoT-Device-Simulator",
+      "slug": "soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1",
+      "url": "/APIs/soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1/"
+    },
+{
+      "name": "Jukeberry",
+      "service": "asyncapiconfdemo",
+      "slug": "jukeberry+asyncapiconfdemo@v1.0.0",
+      "url": "/APIs/jukeberry+asyncapiconfdemo@v1.0.0/"
+    },
+{
+      "name": "Gitter Streaming API",
+      "service": "streaming",
+      "slug": "gitter.com+streaming@v1.0.0",
+      "url": "/APIs/gitter.com+streaming@v1.0.0/"
     }
 ]
 
