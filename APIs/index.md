@@ -1,11 +1,12 @@
 ---
-css: architect
+css: ../assets/css/architect.min.css
 title: Browse the APIs
 layout: md
+#permalink: APIs
 ---
 # APIs
 
 {% for item in collections.api %}
-{% if item.data.stub != true %}* {{ item.data.slug }} - [{{ item.data.name }}]({{ item.data.page.url }}){% endif %}
+{% if item.data.stub != true %}* {{ item.data.slug }} - [{{ item.data.name }}]({{= item.data.page.url | prepend: "../" | append: "index.html" }}){% endif %}
 {% endfor %}
 

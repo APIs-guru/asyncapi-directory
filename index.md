@@ -1,7 +1,7 @@
 ---
 title: 'AsyncAPI-Directory'
 layout: md
-css: architect
+css: ./assets/css/architect.min.css
 ---
 # About AsyncAPI-Directory and APIs.guru
 
@@ -22,12 +22,12 @@ You can contact us at founders@apis.guru / mike.ralphson@gmail.com
 
 ## The APIs
 
-* [Browse the APIs](APIs)
-* [StreamData stubs](stubs)
+* [Browse the APIs](./APIs/index.html)
+* [StreamData stubs](./stubs/index.html)
 * [REST API](rest/v1/apis.json)
 * [RSS feed](rss/feed.xml)
 
-'Stub' API definitions come from the [https://streamdata.io](StreamData.IO) [API Gallery](https://github.com/streamdata-gallery-master/streamrank) under the terms of the CC-BY-NC-SA/3.0 license.
+'Stub' API definitions come from the [https://streamdata.io](StreamData.IO) [API Gallery](https://github.com/streamdata-gallery-master/streamrank) under the terms of the CC-BY-NC-SA/3.0 license. *They appear not to be maintained.*
 
 ## Last updated
 

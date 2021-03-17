@@ -1,12 +1,12 @@
 ---
 layout: md
 title: API Details
-css: architect
+css: ../../assets/css/architect.min.css
 ---
 # {{ info.title }}
 
 * Version: `{{ info.version }}`
-* [Full details](/html/{{ slug }}.html)
+* [Full details]({{ slug | prepend: "../../html/" | append: ".html" }})
 {% if info.contact %}
 {% if info.contact.email %}
 * Contact: 📧 [{{ info.contact.name }}](mailto:{{ info.contact.email }}){% endif %}{% if info.contact.url %}
