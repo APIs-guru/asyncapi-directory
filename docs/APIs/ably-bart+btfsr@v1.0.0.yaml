@@ -1,0 +1,474 @@
+asyncapi: 2.0.0
+info:
+  title: BART GTFS-R on Ably Hub
+  version: 1.0.0
+  contact:
+    name: Ably
+    url: https://www.ably.io/contact
+    email: support@ably.io
+  description: |
+    GTFS-R data on BART's public transport
+  license:
+    name: BART License Agreement
+    url: https://www.bart.gov/schedules/developers/gtfs
+servers:
+  ably:
+    url: ws://realtime.ably.io
+    description: Endpoint used by Ably's Realtime client libraries
+    protocol: ws
+    security:
+      - apiKey: []
+      - jwt: []
+      - httpBearerToken: []
+  mqtt:
+    url: mqtt://mqtt.ably.io:{port}
+    description: Ably's MQTT endpoint
+    variables:
+      port:
+        description: Secure connection (TLS) is available through port 8883.
+        default: "8883"
+        enum:
+          - "1883"
+          - "8883"
+    security:
+      - mqttApiKey: []
+      - mqttJwt: []
+    protocol: mqtt
+    protocolVersion: 3.1.1
+  rest:
+    url: https://rest.ably.io
+    description: Ably REST API
+    protocol: https
+defaultContentType: application/json
+channels:
+  "[product:bart/gtfsr]vehicle":
+    subscribe:
+      summary: Array of currently active bus IDs
+      message:
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                type: string
+              description: Array containing all active vehicle IDs.
+  "[product:bart/gtfsr]vehicle:all":
+    subscribe:
+      summary: Object of all vehicle data.
+      message:
+        contentType: application/json
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                $ref: "#/components/schemas/vehicleFeedEntity"
+  "[product:bart/gtfsr]vehicle:{vehicleId}":
+    subscribe:
+      summary: Object of vehicle details for vehicleId
+      message:
+        payload:
+          $ref: "#/components/schemas/vehicleFeedEntity"
+    parameters:
+      vehicleId:
+        description: Id of the vehicle.
+        schema:
+          type: string
+  "[product:bart/gtfsr]trip_update":
+    subscribe:
+      summary: Array of currently active trip update IDs
+      message:
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                type: string
+              description: Array containing all active trip update IDs.
+  "[product:bart/gtfsr]trip_update:all":
+    subscribe:
+      summary: Object of all trip update data.
+      message:
+        contentType: application/json
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                $ref: "#/components/schemas/tripFeedEntity"
+  "[product:bart/gtfsr]trip_update:{tripUpdateId}":
+    subscribe:
+      summary: Object of trip update details for a given tripUpdateId
+      message:
+        payload:
+          $ref: "#/components/schemas/tripFeedEntity"
+    parameters:
+      tripUpdateId:
+        description: Id of the trip update.
+        schema:
+          type: string
+  "[product:bart/gtfsr]alert":
+    subscribe:
+      summary: Array of currently active alert IDs
+      message:
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                type: string
+              description: Array containing all active alert IDs.
+  "[product:bart/gtfsr]alert:all":
+    subscribe:
+      summary: Object of all alert data.
+      message:
+        contentType: application/json
+        payload:
+          type: object
+          properties:
+            $ref: "#/components/schemas/ablyMessageBasics"
+            data:
+              type: array
+              items:
+                $ref: "#/components/schemas/alertFeedEntity"
+  "[product:bart/gtfsr]alert:{alertId}":
+    subscribe:
+      summary: Object of alert details for alertId
+      message:
+        payload:
+          $ref: "#/components/schemas/alertFeedEntity"
+    parameters:
+      alertId:
+        description: Id of the alert.
+        schema:
+          type: string
+components:
+  schemas:
+    ablyMessageBasics:
+      id:
+        type: integer
+        minimum: 0
+        description: Id of the message
+    vehicleFeedEntity:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the vehicle
+        vehicle:
+          $ref: "#/components/schemas/vehiclePosition"
+        is_deleted:
+          type: boolean
+          description: Whether this entity is to be deleted.
+    tripFeedEntity:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the vehicle
+        trip_update:
+          $ref: "#/components/schemas/tripUpdate"
+        is_deleted:
+          type: boolean
+          description: Whether this entity is to be deleted.
+    alertFeedEntity:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID of the vehicle
+        alert:
+          $ref: "#/components/schemas/alert"
+        is_deleted:
+          type: boolean
+          description: Whether this entity is to be deleted.
+    vehiclePosition:
+      type: object
+      properties:
+        trip:
+          $ref: "#/components/schemas/tripDescriptor"
+        vehicle:
+          $ref: "#/components/schemas/vehicleDescriptor"
+        position:
+          $ref: "#/components/schemas/position"
+        current_stop_sequence:
+          type: string
+          description: The stop sequence index of the current stop. The meaning of
+            current_stop_sequence (i.e., the stop that it refers to) is
+            determined by current_status. If current_status is missing
+            IN_TRANSIT_TO is assumed.
+        stop_id:
+          type: string
+          description: Identifies the current stop. The value must be the same as in
+            stops.txt in the corresponding GTFS feed.
+        current_status:
+          $ref: "#/components/schemas/vehicleStopStatus"
+        timestamp:
+          type: integer
+          description: Moment at which the vehicle's position was measured. In POSIX time
+            (i.e., number of seconds since January 1st 1970 00:00:00 UTC).
+        congestion_level:
+          $ref: "#/components/schemas/congestionLevel"
+        occupancy_status:
+          $ref: "#/components/schemas/occupancyStatus"
+    occupancyStatus:
+      enum:
+        - EMPTY
+        - MANY_SEATS_AVAILABLE
+        - FEW_SEATS_AVAILABLE
+        - STANDING_ROOM_ONLY
+        - CRUSHED_STANDING_ROOM_ONLY
+        - FULL
+        - NOT_ACCEPTING_PASSENGERS
+    congestionLevel:
+      enum:
+        - UNKNOWN_CONGESTION_LEVEL
+        - RUNNING_SMOOTHLY
+        - STOP_AND_GO
+        - CONGESTION
+        - SEVERE_CONGESTION
+    vehicleStopStatus:
+      enum:
+        - INCOMING_AT
+        - STOPPED_AT
+        - IN_TRANSIT_TO
+    position:
+      type: object
+      properties:
+        latitude:
+          type: number
+          description: Vehicle's current latitude
+        longitude:
+          type: number
+          description: Vehicle's current longitude
+        bearing:
+          type: number
+          description: Vehicle's current bearing
+        speed:
+          type: number
+          description: Vehicle's current speed
+    tripUpdate:
+      type: object
+      properties:
+        trip:
+          description: The Trip that this message applies to.
+          $ref: "#/components/schemas/tripDescriptor"
+        vehicle:
+          description: Additional information on the vehicle that is serving this trip.
+          $ref: "#/components/schemas/vehicleDescriptor"
+        stop_time_update:
+          $ref: "#/components/schemas/stopTimeUpdate"
+        timestamp:
+          type: integer
+          description: Moment at which the vehicle's real-time progress was measured. In
+            POSIX time (i.e., the number of seconds since January 1st 1970
+            00:00:00 UTC).
+        delay:
+          type: integer
+          description: The current schedule deviation for the trip.
+    stopTimeUpdate:
+      type: object
+      properties:
+        stop_sequence:
+          type: integer
+          description: Must be the same as in stop_times.txt in the corresponding GTFS feed.
+        stop_id:
+          type: string
+          description: Must be the same as in stops.txt in the corresponding GTFS feed.
+            Either stop_sequence or stop_id must be provided within a
+            StopTimeUpdate - both fields cannot be empty.
+        arrival:
+          description: If schedule_relationship is empty or SCHEDULED, either arrival or
+            departure must be provided within a StopTimeUpdate - both fields
+            cannot be empty. arrival and departure may both be empty when
+            schedule_relationship is SKIPPED. If schedule_relationship is
+            NO_DATA, arrival and departure must be empty.
+          $ref: "#/components/schemas/stopTimeEvent"
+        departure:
+          description: If schedule_relationship is empty or SCHEDULED, either arrival or
+            departure must be provided within a StopTimeUpdate - both fields
+            cannot be empty. arrival and departure may both be empty when
+            schedule_relationship is SKIPPED. If schedule_relationship is
+            NO_DATA, arrival and departure must be empty.
+          $ref: "#/components/schemas/stopTimeEvent"
+        schedule_relationship:
+          $ref: "#/components/schemas/scheduleRelationship"
+    schheduleRelationship:
+      default: SCHEDULED
+      enum:
+        - SCHEDULED
+        - SKIPPED
+        - NO_DATA
+    stopTimeEvent:
+      type: object
+      properties:
+        delay:
+          type: integer
+          description: Delay (in seconds) can be positive (meaning that the vehicle is
+            late) or negative (meaning that the vehicle is ahead of schedule).
+            Delay of 0 means that the vehicle is exactly on time. Either delay
+            or time must be provided within a StopTimeEvent - both fields cannot
+            be empty.
+        time:
+          type: integer
+          description: Event as absolute time. In POSIX time (i.e., number of seconds
+            since January 1st 1970 00:00:00 UTC). Either delay or time must be
+            provided within a StopTimeEvent - both fields cannot be empty.
+        uncertainty:
+          type: integer
+          description: If uncertainty is omitted, it is interpreted as unknown. To specify
+            a completely certain prediction, set its uncertainty to 0.
+    alert:
+      type: object
+      properties:
+        active_period:
+          $ref: "#/components/schemas/timeRange"
+        informed_entity:
+          array: null
+          items:
+            $ref: "#/components/schemas/entitySelector"
+        cause:
+          $ref: "#/components/schemas/cause"
+        effect:
+          $ref: "#/components/schemas/effect"
+        url:
+          type: string
+          description: The URL which provides additional information about the alert.
+        header_text:
+          type: string
+          description: Header for the alert. This plain-text string will be highlighted,
+            for example in boldface.
+        description_text:
+          type: string
+          description: Description for the alert.
+    cause:
+      description: Cause of alert.
+      type: string
+      enum:
+        - UNKNOWN_CAUSE
+        - OTHER_CAUSE
+        - TECHNICAL_PROBLEM
+        - STRIKE
+        - DEMONSTRATION
+        - ACCIDENT
+        - HOLIDAY
+        - WEATHER
+        - MAINTENANCE
+        - CONSTRUCTION
+        - POLICE_ACTIVITY
+        - MEDICAL_EMERGENCY
+    effect:
+      description: Cause of alert.
+      type: string
+      enum:
+        - NO_SERVICE
+        - REDUCED_SERVICE
+        - SIGNIFICANT_DELAYS
+        - DETOUR
+        - ADDITIONAL_SERVICE
+        - MODIFIED_SERVICE
+        - OTHER_EFFECT
+        - UNKNOWN_EFFECT
+        - STOP_MOVED
+    vehicleDescriptor:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID for the vehicle
+        label:
+          type: string
+          description: Label assigned to the vehicle
+        license_plate:
+          type: string
+          description: The vehicle's license plate
+    tripDescriptor:
+      type: object
+      properties:
+        trip_id:
+          type: string
+          description: ID for the trip
+        route_id:
+          type: string
+          description: ID for the route the trip is on
+        direction_id:
+          type: integer
+          description: Number representing direction of trip
+        start_time:
+          type: string
+          description: The initially scheduled start time of this trip.
+        start_date:
+          type: string
+          description: The initially scheduled start date of this trip.
+        schedule_relationship:
+          $ref: "#/components/schemas/scheduleRelationship"
+    scheduleRelationship:
+      description: The relation between this trip and the static schedule.
+      type: string
+      enum:
+        - SCHEDULED
+        - ADDED
+        - UNSCHEDULED
+        - CANCELED
+    entitySelector:
+      type: object
+      properties:
+        agency_id:
+          type: string
+          description: The ID of the agency.
+        route_id:
+          type: string
+          description: The ID of the route.
+        route_type:
+          type: integer
+          description: Type of the route.
+        trip:
+          $ref: "#/components/schemas/tripDescriptor"
+        stop_id:
+          type: string
+          description: The ID of the stop.
+    timeRange:
+      type: array
+      items:
+        start:
+          type: integer
+          description: Timestamp of start of range.
+        end:
+          type: integer
+          description: Timestamp of end of range.
+  securitySchemes:
+    mqttApiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key's public part as the user and the API key's
+        secret part as the password. Only usable over a secure connection.
+    apiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key
+    jwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt)
+    mqttJwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt).
+        Use the token as your user, and keep the password blank
+    httpBearerToken:
+      type: http
+      scheme: bearer

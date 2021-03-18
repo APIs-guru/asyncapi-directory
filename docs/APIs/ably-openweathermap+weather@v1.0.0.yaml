@@ -1,0 +1,198 @@
+asyncapi: 2.0.0
+info:
+  title: OpenWeatherMap on Ably Hub
+  version: 1.0.0
+  contact:
+    name: Ably
+    url: https://www.ably.io/contact
+    email: support@ably.io
+  description: |
+    GTFS-R data on OpenWeatherMap
+servers:
+  ably:
+    url: ws://realtime.ably.io
+    description: Endpoint used by Ably's Realtime client libraries
+    protocol: ws
+    security:
+      - apiKey: []
+      - jwt: []
+      - httpBearerToken: []
+  mqtt:
+    url: mqtt://mqtt.ably.io:{port}
+    description: Ably's MQTT endpoint
+    variables:
+      port:
+        description: Secure connection (TLS) is available through port 8883.
+        default: "8883"
+        enum:
+          - "1883"
+          - "8883"
+    security:
+      - mqttApiKey: []
+      - mqttJwt: []
+    protocol: mqtt
+    protocolVersion: 3.1.1
+  rest:
+    url: https://rest.ably.io
+    description: Ably REST API
+    protocol: https
+defaultContentType: application/json
+channels:
+  "[product:ably-openweathermap/weather]weather:{cityId}":
+    subscribe:
+      summary: City's weather details
+      message:
+        payload:
+          type: object
+          properties:
+            coord:
+              $ref: "#/components/schemas/coord"
+            weather:
+              type: array
+              items:
+                $ref: "#/components/schemas/weather"
+            main:
+              $ref: "#/components/schemas/main"
+            wind:
+              $ref: "#/components/schemas/wind"
+            clouds:
+              $ref: "#/components/schemas/clouds"
+            sys:
+              $ref: "#/components/schemas/sys"
+            base:
+              type: string
+              description: Type of measurement base
+            visibility:
+              type: integer
+              description: Visibility value
+            dt:
+              type: integer
+              description: Dt value
+            timezone:
+              type: integer
+              description: Timezone
+            id:
+              type: integer
+              description: ID of measurement
+            name:
+              type: string
+              description: Name of measurement location
+            cod:
+              type: integer
+              description: COD value
+    parameters:
+      cityId:
+        description: Id of the city
+        schema:
+          type: integer
+components:
+  schemas:
+    coord:
+      type: object
+      properties:
+        lon:
+          type: number
+          description: Measurement location's longitude
+        lat:
+          type: number
+          description: Measurement location's latitude
+    main:
+      type: object
+      description: Main details
+      properties:
+        temp:
+          type: number
+          description: Temperature
+        feels_like:
+          type: number
+          description: How the temperature feels
+        temp_min:
+          type: number
+          description: Minimum temperature
+        temp_max:
+          type: number
+          description: Maximum temperature
+        pressure:
+          type: integer
+          description: Pressure
+        humidity:
+          type: integer
+          description: Humidity
+    sys:
+      type: object
+      description: Sys details
+      properties:
+        type:
+          type: integer
+          description: Sys type
+        id:
+          type: integer
+          description: Sys ID
+        country:
+          type: string
+          description: Country
+        sunrise:
+          type: integer
+          description: Sunrise time
+        sunset:
+          type: integer
+          description: Sunset time
+    wind:
+      type: object
+      description: Wind details
+      properties:
+        speed:
+          type: number
+          description: Wind speed
+        deg:
+          type: number
+          description: Angle of wind
+    clouds:
+      type: object
+      description: Cloud details
+      properties:
+        all:
+          type: integer
+          description: Cloud type
+    weather:
+      type: object
+      description: The weather details
+      properties:
+        id:
+          type: integer
+          description: Weather's id
+        main:
+          type: string
+          description: Main weather category
+        description:
+          type: string
+          description: Description of the weather
+        icon:
+          type: string
+          description: Icon value
+  securitySchemes:
+    mqttApiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key's public part as the user and the API key's
+        secret part as the password. Only usable over a secure connection.
+    apiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key
+    jwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt)
+    mqttJwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt).
+        Use the token as your user, and keep the password blank
+    httpBearerToken:
+      type: http
+      scheme: bearer

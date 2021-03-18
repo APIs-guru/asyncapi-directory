@@ -1,0 +1,116 @@
+asyncapi: 2.0.0
+info:
+  title: BBC News on Ably Hub
+  version: 1.0.0
+  contact:
+    name: Ably
+    url: https://www.ably.io/contact
+    email: support@ably.io
+  description: |
+    GTFS-R data on BBC News's most recent news
+  license:
+    name: BBC News License Agreement
+    url: https://www.bbc.co.uk/usingthebbc/terms/
+servers:
+  ably:
+    url: ws://realtime.ably.io
+    description: Endpoint used by Ably's Realtime client libraries
+    protocol: ws
+    security:
+      - apiKey: []
+      - jwt: []
+      - httpBearerToken: []
+  mqtt:
+    url: mqtt://mqtt.ably.io:{port}
+    description: Ably's MQTT endpoint
+    variables:
+      port:
+        description: Secure connection (TLS) is available through port 8883.
+        default: "8883"
+        enum:
+          - "1883"
+          - "8883"
+    security:
+      - mqttApiKey: []
+      - mqttJwt: []
+    protocol: mqtt
+    protocolVersion: 3.1.1
+  rest:
+    url: https://rest.ably.io
+    description: Ably REST API
+    protocol: https
+defaultContentType: application/json
+channels:
+  "[product:ably-bbc/news]home":
+    subscribe:
+      summary: New news stories on the BBC Home page
+      message:
+        payload:
+          type: object
+          properties:
+            title:
+              type: string
+              description: The title of the article
+            description:
+              type: string
+              description: The description of the article
+            summary:
+              type: string
+              description: The summary of the article
+            date:
+              type: string
+              format: dateTime
+              description: The date and time the article was published
+            pubdate:
+              type: string
+              format: dateTime
+              description: The date and time the article was published
+            pubDate:
+              type: string
+              format: dateTime
+              description: The date and time the article was published
+            link:
+              type: string
+              description: The link to the article
+            guid:
+              type: string
+              description: Unique ID for the article
+            author:
+              type: string
+              description: The author's name
+            comments:
+              type: string
+              description: Comments on the article
+            origlink:
+              type: string
+              description: Link to the original source if available
+            permalink:
+              type: string
+              description: link to the article which should always work
+components:
+  securitySchemes:
+    mqttApiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key's public part as the user and the API key's
+        secret part as the password. Only usable over a secure connection.
+    apiKey:
+      type: apiKey
+      in: user
+      description: Provide your API key
+    jwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt)
+    mqttJwt:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: JWT generated matching the [Ably JWT
+        requirements](https://www.ably.io/documentation/core-features/authentication#ably-jwt).
+        Use the token as your user, and keep the password blank
+    httpBearerToken:
+      type: http
+      scheme: bearer
