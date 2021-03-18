@@ -7,7 +7,7 @@ const path = require('path');
 const util = require('util');
 
 const fetch = require('node-fetch');
-const yaml = require('js-yaml');
+const yaml = require('yaml');
 const recurse = require('reftools/lib/recurse').recurse;
 const jptr = require('reftools/lib/jptr').jptr;
 const docs = require('asyncapi-docgen');
@@ -20,7 +20,11 @@ const doc2 = new Generator('@asyncapi/html-template', path.resolve(__dirname, 'd
   }
 });
 
-const metadata = yaml.safeLoad(fs.readFileSync('./docs/_data/metadata.yaml','utf8'),{json:true});
+const colour = process.env.NODE_DISABLE_COLORS ?
+    { red: '', yellow: '', green: '', normal: '' } :
+    { red: '\x1b[31m', yellow: '\x1b[33;1m', green: '\x1b[32m', normal: '\x1b[0m' };
+
+const metadata = yaml.parse(fs.readFileSync('./docs/_data/metadata.yaml','utf8'));
 
 function fixStr(str) {
     str = str.split('\r\n').join('\n').split('\r').join('').split('---').join('###');
@@ -54,26 +58,26 @@ function fixApi(api) {
 async function main() {
     return new Promise(async function(resolve,reject){
         for (let api in metadata) {
-            console.log(api);
+            console.log(colour.green+api+colour.normal);
             for (let service in metadata[api]) {
-                console.log('  ',service,metadata[api][service].origin);
+                console.log('  ',colour.yellow+service,metadata[api][service].origin+colour.normal);
 		        try {
 		            const res = await fetch(metadata[api][service].origin);
                     let str = await res.text();
                     str = fixStr(str);
-                    let obj = yaml.safeLoad(str,{json:true});
+                    let obj = yaml.parse(str);
                     obj = fixApi(obj);
-                    str = yaml.safeDump(obj);
+                    str = yaml.stringify(obj);
                     let info;
                     if (obj && obj.asyncapi && obj.info && obj.info.version) {
                         info = obj.info;
                         console.log('   @v'+info.version,info.title);
                         const filename = api + (service === 'default' ? '' : '+'+service) + '@v' + info.version;
 
-                        fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.safeDump(obj),'utf8',function(err){ if (err) console.warn(err.message) });
+                        fs.writeFile('./docs/APIs/'+filename+'.yaml',yaml.stringify(obj),'utf8',function(err){ if (err) console.warn(err.message) });
 
                         const header = { slug: filename, name: info.title, service: service, alpha: filename[0], layout: 'api', origin: metadata[api][service].origin, info: info, termsOfService: obj.termsOfService||'', externalDocs: obj.externalDocs||{}, stub: metadata[api][service].stub || false, tags: 'api' };
-                        fs.writeFileSync('APIs/'+filename+'.md','---\n'+yaml.safeDump(header)+'\n---\n','utf8');
+                        fs.writeFileSync('APIs/'+filename+'.md','---\n'+yaml.stringify(header)+'\n---\n','utf8');
 
                         try {
                             let html;
@@ -84,7 +88,7 @@ async function main() {
                             }
                             else if (obj.asyncapi.startsWith('2.')) {
                                 await doc2.generateFromString(str);
-                                fs.renameFileSync('./docs/html/index.html','./docs/html/'+filename+'.html');
+                                fs.renameSync('./docs/html/index.html','./docs/html/'+filename+'.html');
                             }
                         }
                         catch (ex) {
