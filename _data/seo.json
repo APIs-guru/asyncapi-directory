@@ -1,0 +1,11 @@
+{
+  "title": "APIs.guru",
+  "description": "APIs.guru - AsyncAPI Directory",
+  "url": "https://apis.guru/asyncapi-directory",
+  "author": "APIs.guru",
+  "twitter": "APIs_guru",
+  "image": "/assets/images/logo.svg",
+  "options": {
+    "imageWithBaseUrl": true
+  }
+}

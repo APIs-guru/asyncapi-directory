@@ -1,7 +1,9 @@
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const pluginSEO = require('eleventy-plugin-seo');
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.addPlugin(pluginSEO, require("./_data/seo.json"));
   // Universal filters add to:
   // * Liquid
   // * Nunjucks
