@@ -4,12 +4,11 @@ name: Bitstamp Websocket API
 service: websocket
 alpha: b
 layout: api
-origin: >-
-  https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/bitstamp/bitstamp-websocket-api-async.md
+origin: https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/bitstamp/bitstamp-websocket-api-async.md
 info:
   title: Bitstamp Websocket API
   version: 1.0.0
-termsOfService: ''
+termsOfService: ""
 externalDocs: {}
 stub: true
 tags: api

@@ -791,4 +791,20 @@ twitter:
     stub: true
 jukeberry:
   asyncapiconfdemo:
-    origin: https://raw.githubusercontent.com/Jukeberry/node-player/master/asyncapi.yaml
+    origin: >-
+      https://raw.githubusercontent.com/Jukeberry/node-player/master/asyncapi.yaml
+ably-bbc:
+  news:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/013/original/bbc.yaml?1602776548
+    stub: false
+ably-openweathermap:
+  weather:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/019/original/weather.yaml?1602776654
+    stub: false
+ably-bart:
+  btfsr:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/173/original/bart.yaml?1602776961
+    stub: false

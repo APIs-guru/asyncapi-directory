@@ -15,7 +15,7 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/find_topics'
+    - $ref: "#/components/messages/find_topics"
 asyncapi: 1.2.0
 components:
   messages:

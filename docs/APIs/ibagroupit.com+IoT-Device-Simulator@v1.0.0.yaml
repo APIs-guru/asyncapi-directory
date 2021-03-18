@@ -2,39 +2,39 @@ asyncapi: 1.0.0
 info:
   title: IoT Data simulator websocket/STOMP API
   version: 1.0.0
-  x-logo: 'https://avatars0.githubusercontent.com/u/16401334?v=4&s=200'
+  x-logo: https://avatars0.githubusercontent.com/u/16401334?v=4&s=200
 servers:
-  - url: 'services:8080/ws'
+  - url: services:8080/ws
     description: sessions management API
     scheme: stomp
 topics:
   /user/queue/error:
     subscribe:
-      $ref: '#/components/messages/errorMessage'
+      $ref: "#/components/messages/errorMessage"
   /user/queue/sessions:
     subscribe:
-      $ref: '#/components/messages/sessionStatusesCommandResultMessage'
+      $ref: "#/components/messages/sessionStatusesCommandResultMessage"
   /sessions:
     publish:
-      $ref: '#/components/messages/sessionStatusesCommandMessage'
-  '/user/queue/sessions.{sessionId}':
+      $ref: "#/components/messages/sessionStatusesCommandMessage"
+  "/user/queue/sessions.{sessionId}":
     subscribe:
-      $ref: '#/components/messages/sessionManagementCommandResultMessage'
-  '/sessions.{sessionId}':
+      $ref: "#/components/messages/sessionManagementCommandResultMessage"
+  "/sessions.{sessionId}":
     publish:
-      $ref: '#/components/messages/sessionManagementCommandMessage'
-  '/topic/sessions.{sessionId}':
+      $ref: "#/components/messages/sessionManagementCommandMessage"
+  "/topic/sessions.{sessionId}":
     subscribe:
-      $ref: '#/components/messages/sessionStatusMessage'
-  '/topic/sessions.{sessionId}.payload':
+      $ref: "#/components/messages/sessionStatusMessage"
+  "/topic/sessions.{sessionId}.payload":
     subscribe:
-      $ref: '#/components/messages/sessionsPayloadMessage'
-  '/topic/sessions.{sessionId}.analytics':
+      $ref: "#/components/messages/sessionsPayloadMessage"
+  "/topic/sessions.{sessionId}.analytics":
     subscribe:
-      $ref: '#/components/messages/sessionsAnalyticsMessage'
-  '/topic/sessions.{sessionId}.errors':
+      $ref: "#/components/messages/sessionsAnalyticsMessage"
+  "/topic/sessions.{sessionId}.errors":
     subscribe:
-      $ref: '#/components/messages/sessionsErrorMessage'
+      $ref: "#/components/messages/sessionsErrorMessage"
 components:
   messages:
     errorMessage:
@@ -67,9 +67,8 @@ components:
             description: session id property
           command:
             type: string
-            description: >-
-              session management command. One of the following: "start" |
-              "pause" | "stop" | "restart"
+            description: 'session management command. One of the following: "start" |
+              "pause" | "stop" | "restart"'
             enum:
               - start
               - pause
@@ -96,9 +95,9 @@ components:
             type: string
             description: session id property
           result:
-            $ref: '#/components/schemas/commandResult'
+            $ref: "#/components/schemas/commandResult"
           errorMessage:
-            $ref: '#/components/schemas/commandErrorMessage'
+            $ref: "#/components/schemas/commandErrorMessage"
     sessionStatusesCommandResultMessage:
       summary: Active sesssions status information.
       tags:
@@ -114,14 +113,14 @@ components:
             default: sessions_status_command_result
             description: '"sessions_status_command_result" message type'
           result:
-            $ref: '#/components/schemas/commandResult'
+            $ref: "#/components/schemas/commandResult"
           errorMessage:
-            $ref: '#/components/schemas/commandErrorMessage'
+            $ref: "#/components/schemas/commandErrorMessage"
           statuses:
             type: array
             description: active sessions statuses
             items:
-              $ref: '#/components/schemas/sessionStatus'
+              $ref: "#/components/schemas/sessionStatus"
         required:
           - type
           - statuses
@@ -138,7 +137,7 @@ components:
             default: session_status
             description: '"session_status" message type'
           status:
-            $ref: '#/components/schemas/sessionStatus'
+            $ref: "#/components/schemas/sessionStatus"
     sessionsPayloadMessage:
       summary: Active sesssions processed payload message.
       tags:
@@ -156,8 +155,7 @@ components:
             description: session id property
           message:
             type: string
-            description: >-
-              session payload message which has been successfully sent to
+            description: session payload message which has been successfully sent to
               external target system
           timestamp:
             type: number
@@ -177,9 +175,8 @@ components:
             description: '"session_analytics" message type'
           tag:
             type: string
-            description: >-
-              session analytics tag. One of the following: "sessions_started" |
-              "session_completed" | "session_paused" | "session_failed"
+            description: 'session analytics tag. One of the following: "sessions_started" |
+              "session_completed" | "session_paused" | "session_failed"'
             enum:
               - sessions_started
               - session_completed
@@ -226,9 +223,8 @@ components:
           description: session id property
         state:
           type: string
-          description: >-
-            current active session state. One of the following: "running" |
-            "paused" | "completed" | "failed"
+          description: 'current active session state. One of the following: "running" |
+            "paused" | "completed" | "failed"'
           enum:
             - running
             - paused

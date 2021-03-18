@@ -1144,6 +1144,24 @@
       "service": "streaming",
       "slug": "gitter.com+streaming@v1.0.0",
       "url": "/APIs/gitter.com+streaming@v1.0.0/"
+    },
+{
+      "name": "BBC News on Ably Hub",
+      "service": "news",
+      "slug": "ably-bbc+news@v1.0.0",
+      "url": "/APIs/ably-bbc+news@v1.0.0/"
+    },
+{
+      "name": "OpenWeatherMap on Ably Hub",
+      "service": "weather",
+      "slug": "ably-openweathermap+weather@v1.0.0",
+      "url": "/APIs/ably-openweathermap+weather@v1.0.0/"
+    },
+{
+      "name": "BART GTFS-R on Ably Hub",
+      "service": "btfsr",
+      "slug": "ably-bart+btfsr@v1.0.0",
+      "url": "/APIs/ably-bart+btfsr@v1.0.0/"
     }
 ]
 

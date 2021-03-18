@@ -3,7 +3,7 @@ info:
   title: Blockchain Info
   version: 1.0.0
 servers:
-  - url: 'blockchain.info/rawaddr/{bitcoin_address}'
+  - url: blockchain.info/rawaddr/{bitcoin_address}
     scheme: https
     variables:
       bitcoin_address:
@@ -13,8 +13,8 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/rawaddr_{bitcoin_address}'
+    - $ref: "#/components/messages/rawaddr_{bitcoin_address}"
 asyncapi: 1.2.0
 components:
   messages:
-    'rawaddr_{bitcoin_address}': {}
+    "rawaddr_{bitcoin_address}": {}

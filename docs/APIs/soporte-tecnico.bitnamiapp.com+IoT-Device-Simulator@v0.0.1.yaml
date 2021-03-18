@@ -6,58 +6,58 @@ info:
   description: The SCINAP API allows you to manage the Sinapse IoT HUB
   license:
     name: Apache 2.0
-    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+    url: https://www.apache.org/licenses/LICENSE-2.0
 baseTopic: CLIENTID.IOT
 servers:
-  - url: 'soporte-tecnico.bitnamiapp.com:{port}'
+  - url: soporte-tecnico.bitnamiapp.com:{port}
     scheme: mqtt
     description: Sinapse Broker hosted in soporte-tecnico bitnami machine
     variables:
       port:
         description: Secure connection (TLS) is available through port 8883.
-        default: '1883'
+        default: "1883"
         enum:
-          - '1883'
-          - '8883'
+          - "1883"
+          - "8883"
 security:
   - apiKey: []
 topics:
-  'ACT.{ID}.321':
+  "ACT.{ID}.321":
     subscribe:
-      $ref: '#/components/messages/spiOD'
-  'ACT/{ID}/322':
+      $ref: "#/components/messages/spiOD"
+  "ACT/{ID}/322":
     subscribe:
-      $ref: '#/components/messages/spiP'
-  'ACT/{ID}/130':
+      $ref: "#/components/messages/spiP"
+  "ACT/{ID}/130":
     subscribe:
-      $ref: '#/components/messages/uartC'
-  'ACT/{ID}/323':
+      $ref: "#/components/messages/uartC"
+  "ACT/{ID}/323":
     subscribe:
-      $ref: '#/components/messages/uartOD'
-  'ACT/{ID}/300':
+      $ref: "#/components/messages/uartOD"
+  "ACT/{ID}/300":
     subscribe:
-      $ref: '#/components/messages/transpATOD'
-  'ACT/{ID}/324':
+      $ref: "#/components/messages/transpATOD"
+  "ACT/{ID}/324":
     subscribe:
-      $ref: '#/components/messages/uartP'
-  'ACT/{ID}/317':
+      $ref: "#/components/messages/uartP"
+  "ACT/{ID}/317":
     subscribe:
-      $ref: '#/components/messages/setPwmOD'
-  'ACT/{ID}/318':
+      $ref: "#/components/messages/setPwmOD"
+  "ACT/{ID}/318":
     subscribe:
-      $ref: '#/components/messages/setPwmP'
+      $ref: "#/components/messages/setPwmP"
   SEN/MEASUREMENTS/721:
     publish:
-      $ref: '#/components/messages/spiM'
+      $ref: "#/components/messages/spiM"
   SEN/MEASUREMENTS/723:
     publish:
-      $ref: '#/components/messages/uartM'
-  'DEBUG/{ID}/700':
+      $ref: "#/components/messages/uartM"
+  "DEBUG/{ID}/700":
     publish:
-      $ref: '#/components/messages/transpATD'
-  'DEBUG/{ID}/717':
+      $ref: "#/components/messages/transpATD"
+  "DEBUG/{ID}/717":
     publish:
-      $ref: '#/components/messages/setPwmD'
+      $ref: "#/components/messages/setPwmD"
 components:
   messages:
     spiOD:
@@ -65,10 +65,10 @@ components:
       description: >-
         The IoT device receives this message and then transmit the received
         payload to the SPI interface indicated in the message.
-          The SPI return a response and this content is sent as a payload into the response message (721;). 
-          If LOCATE is true, then the response message contains also the GPS location.
+         The SPI return a response and this content is sent as a payload into the response message (721;). 
+         If LOCATE is true, then the response message contains also the GPS location.
       payload:
-        $ref: '#/components/schemas/spiOD'
+        $ref: "#/components/schemas/spiOD"
       tags:
         - name: ondemand
         - name: send payload
@@ -78,7 +78,7 @@ components:
       summary: Device send periodically a payload through SPI Interface to peripheral
       description: TODO
       payload:
-        $ref: '#/components/schemas/spiP'
+        $ref: "#/components/schemas/spiP"
       tags:
         - name: periodically
         - name: send payload
@@ -88,7 +88,7 @@ components:
       summary: Configuration of the UART indicated in the payload
       description: TODO
       payload:
-        $ref: '#/components/schemas/uartC'
+        $ref: "#/components/schemas/uartC"
       tags:
         - name: ondemand
         - name: configuration
@@ -98,7 +98,7 @@ components:
       summary: Device send a payload through UART Interface to peripheral
       description: TODO
       payload:
-        $ref: '#/components/schemas/uartOD'
+        $ref: "#/components/schemas/uartOD"
       tags:
         - name: ondemand
         - name: send payload
@@ -108,7 +108,7 @@ components:
       summary: Device send periodically a payload through UART Interface to peripheral
       description: TODO
       payload:
-        $ref: '#/components/schemas/uartP'
+        $ref: "#/components/schemas/uartP"
       tags:
         - name: periodically
         - name: send payload
@@ -118,7 +118,7 @@ components:
       summary: Device send AT Command to selected transceiver internally
       description: TODO
       payload:
-        $ref: '#/components/schemas/transpATOD'
+        $ref: "#/components/schemas/transpATOD"
       tags:
         - name: ondemand
         - name: send payload
@@ -128,19 +128,18 @@ components:
       summary: Set static value for PWM
       description: TODO
       payload:
-        $ref: '#/components/schemas/setPwmOD'
+        $ref: "#/components/schemas/setPwmOD"
       tags:
         - name: ondemand
         - name: actuation
         - name: 717;
           description: Response message after process the action
     setPwmP:
-      summary: >-
-        Set static value for PWM periodically. There is a maximum of 10 steps.
+      summary: Set static value for PWM periodically. There is a maximum of 10 steps.
         If any step is not needed set its parameters to -1
       description: TODO
       payload:
-        $ref: '#/components/schemas/setPwmP'
+        $ref: "#/components/schemas/setPwmP"
       tags:
         - name: periodically
         - name: actuation
@@ -150,7 +149,7 @@ components:
       summary: Response that contains the payload sent by the asked SPI
       description: TODO
       payload:
-        $ref: '#/components/schemas/spiM'
+        $ref: "#/components/schemas/spiM"
       tags:
         - name: response
         - name: ondemand
@@ -159,18 +158,17 @@ components:
       summary: Response that contains the payload sent by the asked UART
       description: TODO
       payload:
-        $ref: '#/components/schemas/uartM'
+        $ref: "#/components/schemas/uartM"
       tags:
         - name: response
         - name: ondemand
         - name: periodically
     transpATD:
-      summary: >-
-        Response that contains the payload sent by the asked DEVICE managed with
-        AT commands
+      summary: Response that contains the payload sent by the asked DEVICE managed
+        with AT commands
       description: TODO
       payload:
-        $ref: '#/components/schemas/transpATD'
+        $ref: "#/components/schemas/transpATD"
       tags:
         - name: response
         - name: ondemand
@@ -179,7 +177,7 @@ components:
       summary: Response to actuation over PWM
       description: TODO
       payload:
-        $ref: '#/components/schemas/setPwmD'
+        $ref: "#/components/schemas/setPwmD"
       tags:
         - name: response
         - name: ondemand
@@ -191,198 +189,197 @@ components:
       properties:
         command:
           type: string
-          description: '321;{SPI};{PAYLOAD_SPI};{FORMAT};{LOCATE};'
+          description: 321;{SPI};{PAYLOAD_SPI};{FORMAT};{LOCATE};
         SPI:
-          $ref: '#/components/schemas/SPI'
+          $ref: "#/components/schemas/SPI"
         PAYLOAD_SPI:
-          $ref: '#/components/schemas/PAYLOAD'
+          $ref: "#/components/schemas/PAYLOAD"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         LOCATE:
-          $ref: '#/components/schemas/LOCATE'
+          $ref: "#/components/schemas/LOCATE"
     spiP:
       type: object
       properties:
         command:
           type: string
-          description: '322;{SPI};{PAYLOAD_SPI};{FORMAT};${PERIOD_SPI};{LOCATE};'
+          description: 322;{SPI};{PAYLOAD_SPI};{FORMAT};${PERIOD_SPI};{LOCATE};
         SPI:
-          $ref: '#/components/schemas/SPI'
+          $ref: "#/components/schemas/SPI"
         PAYLOAD_SPI:
-          $ref: '#/components/schemas/PAYLOAD'
+          $ref: "#/components/schemas/PAYLOAD"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         PERIOD_SPI:
-          $ref: '#/components/schemas/PERIOD'
+          $ref: "#/components/schemas/PERIOD"
         LOCATE:
-          $ref: '#/components/schemas/LOCATE'
+          $ref: "#/components/schemas/LOCATE"
     uartC:
       type: object
       properties:
         command:
           type: string
-          description: '130;{UART};{BAUDRATE};{DF};{SB};{PAR};'
+          description: 130;{UART};{BAUDRATE};{DF};{SB};{PAR};
         UART:
-          $ref: '#/components/schemas/UART'
+          $ref: "#/components/schemas/UART"
         BAUDRATE:
-          $ref: '#/components/schemas/BAUDRATE'
+          $ref: "#/components/schemas/BAUDRATE"
         DF:
-          $ref: '#/components/schemas/DF'
+          $ref: "#/components/schemas/DF"
         SB:
-          $ref: '#/components/schemas/SB'
+          $ref: "#/components/schemas/SB"
         PAR:
-          $ref: '#/components/schemas/PAR'
+          $ref: "#/components/schemas/PAR"
     uartOD:
       type: object
       properties:
         command:
           type: string
-          description: '323;{UART};{PAYLOAD_UART};{FORMAT};{LOCATE};'
+          description: 323;{UART};{PAYLOAD_UART};{FORMAT};{LOCATE};
         UART:
-          $ref: '#/components/schemas/UART'
+          $ref: "#/components/schemas/UART"
         PAYLOAD_UART:
-          $ref: '#/components/schemas/PAYLOAD'
+          $ref: "#/components/schemas/PAYLOAD"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         LOCATE:
-          $ref: '#/components/schemas/LOCATE'
+          $ref: "#/components/schemas/LOCATE"
     uartP:
       type: object
       properties:
         command:
           type: string
-          description: '324;{UART};{PAYLOAD_UART};{FORMAT};${PERIOD_UART};{LOCATE};'
+          description: 324;{UART};{PAYLOAD_UART};{FORMAT};${PERIOD_UART};{LOCATE};
         UART:
-          $ref: '#/components/schemas/UART'
+          $ref: "#/components/schemas/UART"
         PAYLOAD_UART:
-          $ref: '#/components/schemas/PAYLOAD'
+          $ref: "#/components/schemas/PAYLOAD"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         PERIOD_UART:
-          $ref: '#/components/schemas/PERIOD'
+          $ref: "#/components/schemas/PERIOD"
         LOCATE:
-          $ref: '#/components/schemas/LOCATE'
+          $ref: "#/components/schemas/LOCATE"
     transpATOD:
       type: object
       properties:
         command:
           type: string
-          description: '300;{DEVICE_AT};{PAYLOAD_AT};'
+          description: 300;{DEVICE_AT};{PAYLOAD_AT};
         DEVICE_AT:
-          $ref: '#/components/schemas/DEVICE_AT'
+          $ref: "#/components/schemas/DEVICE_AT"
         PAYLOAD_AT:
-          $ref: '#/components/schemas/PAYLOAD_AT'
+          $ref: "#/components/schemas/PAYLOAD_AT"
     setPwmOD:
       type: object
       properties:
         command:
           type: string
-          description: '317;{DC};{FREQ};'
+          description: 317;{DC};{FREQ};
         DC:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         FREQ:
-          $ref: '#/components/schemas/FREQ'
+          $ref: "#/components/schemas/FREQ"
     setPwmP:
       type: object
       properties:
         command:
           type: string
-          description: >-
-            318;{DC_0};{TIME_0};{DC_1};{TIME_1};{DC_2};{TIME_2};{DC_3};{TIME_3};{DC_4};{TIME_4};{DC_5};{TIME_5};{DC_6};{TIME_6};{DC_7};{TIME_7};{DC_8};{TIME_8};{DC_9};{TIME_9};{FREQ};{NTIMES};
+          description: 318;{DC_0};{TIME_0};{DC_1};{TIME_1};{DC_2};{TIME_2};{DC_3};{TIME_3};{DC_4};{TIME_4};{DC_5};{TIME_5};{DC_6};{TIME_6};{DC_7};{TIME_7};{DC_8};{TIME_8};{DC_9};{TIME_9};{FREQ};{NTIMES};
         DC_0:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_0:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_1:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_1:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_2:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_2:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_3:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_3:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_4:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_4:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_5:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_5:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_6:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_6:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_7:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_7:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_8:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_8:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         DC_9:
-          $ref: '#/components/schemas/DC'
+          $ref: "#/components/schemas/DC"
         TIME_9:
-          $ref: '#/components/schemas/TIME'
+          $ref: "#/components/schemas/TIME"
         FREQ:
-          $ref: '#/components/schemas/FREQ'
+          $ref: "#/components/schemas/FREQ"
         NTIMES:
-          $ref: '#/components/schemas/NTIMES'
+          $ref: "#/components/schemas/NTIMES"
     spiM:
       type: object
       properties:
         command:
           type: string
-          description: '721;{ID};{SPI};{PAYLOAD_SPI_R};{FORMAT};{LAT};{LONG};{TIMESTAMP};'
+          description: 721;{ID};{SPI};{PAYLOAD_SPI_R};{FORMAT};{LAT};{LONG};{TIMESTAMP};
         ID:
-          $ref: '#/components/schemas/ID'
+          $ref: "#/components/schemas/ID"
         SPI:
-          $ref: '#/components/schemas/SPI'
+          $ref: "#/components/schemas/SPI"
         PAYLOAD_SPI_R:
-          $ref: '#/components/schemas/PAYLOAD_R'
+          $ref: "#/components/schemas/PAYLOAD_R"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         LAT:
-          $ref: '#/components/schemas/LAT'
+          $ref: "#/components/schemas/LAT"
         LONG:
-          $ref: '#/components/schemas/LONG'
+          $ref: "#/components/schemas/LONG"
         TIMESTAMP:
-          $ref: '#/components/schemas/TIMESTAMP'
+          $ref: "#/components/schemas/TIMESTAMP"
     uartM:
       type: object
       properties:
         command:
           type: string
-          description: '723;{ID};{UART};{PAYLOAD_UART_R};{FORMAT};{LAT};{LONG};{TIMESTAMP};'
+          description: 723;{ID};{UART};{PAYLOAD_UART_R};{FORMAT};{LAT};{LONG};{TIMESTAMP};
         ID:
-          $ref: '#/components/schemas/ID'
+          $ref: "#/components/schemas/ID"
         UART:
-          $ref: '#/components/schemas/UART'
+          $ref: "#/components/schemas/UART"
         PAYLOAD_UART_R:
-          $ref: '#/components/schemas/PAYLOAD_R'
+          $ref: "#/components/schemas/PAYLOAD_R"
         FORMAT:
-          $ref: '#/components/schemas/FORMAT'
+          $ref: "#/components/schemas/FORMAT"
         LAT:
-          $ref: '#/components/schemas/LAT'
+          $ref: "#/components/schemas/LAT"
         LONG:
-          $ref: '#/components/schemas/LONG'
+          $ref: "#/components/schemas/LONG"
         TIMESTAMP:
-          $ref: '#/components/schemas/TIMESTAMP'
+          $ref: "#/components/schemas/TIMESTAMP"
     transpATD:
       type: object
       properties:
         command:
           type: string
-          description: '700;{ID};{PAYLOAD_AT_R};'
+          description: 700;{ID};{PAYLOAD_AT_R};
         ID:
-          $ref: '#/components/schemas/ID'
+          $ref: "#/components/schemas/ID"
         PAYLOAD_AT_R:
-          $ref: '#/components/schemas/PAYLOAD_AT_R'
+          $ref: "#/components/schemas/PAYLOAD_AT_R"
     setPwmD:
       type: object
       properties:
@@ -393,39 +390,35 @@ components:
       type: string
       description: ID of the SPI interface of the commboard
       enum:
-        - '1'
-        - '2'
+        - "1"
+        - "2"
     UART:
       type: string
       description: ID of the UART interface of the commboard
       enum:
-        - '1'
-        - '2'
-        - '3'
-        - '4'
-        - '5'
-        - '6'
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
     PAYLOAD:
       type: string
-      description: >-
-        Payload to be sent through an interface like SPI, UART, I2C, etc. The
-        string can contains binary, decimal, hexadecimal or ASCII characters
+      description: Payload to be sent through an interface like SPI, UART, I2C, etc.
+        The string can contains binary, decimal, hexadecimal or ASCII characters
     PAYLOAD_AT:
       type: string
-      description: >-
-        Payload to be sent internally to a communication device. The string can
-        contains ASCII characters (Plain text)
+      description: Payload to be sent internally to a communication device. The string
+        can contains ASCII characters (Plain text)
     PAYLOAD_R:
       type: string
-      description: >-
-        Payload sent as response to a question through an interface like SPI,
-        UART, I2C, etc. The string can contains binary, decimal, hexadecimal or
-        ASCII characters
+      description: Payload sent as response to a question through an interface like
+        SPI, UART, I2C, etc. The string can contains binary, decimal,
+        hexadecimal or ASCII characters
     PAYLOAD_AT_R:
       type: string
-      description: >-
-        Payload sent as response to a question to a peripheral managed with AT
-        commands. The string can contains ASCII characters (Plain text)
+      description: Payload sent as response to a question to a peripheral managed with
+        AT commands. The string can contains ASCII characters (Plain text)
     FORMAT:
       type: string
       description: Indicates the format of the payload
@@ -438,8 +431,8 @@ components:
       type: string
       description: Indicates if a location should be sent in the response
       enum:
-        - '1'
-        - '0'
+        - "1"
+        - "0"
     PERIOD:
       type: string
       description: Indicates the sampling period in seconds
@@ -453,14 +446,14 @@ components:
       type: string
       description: Indicates if the UART works with stop bit or not
       enum:
-        - '1'
-        - '0'
+        - "1"
+        - "0"
     PAR:
       type: string
       description: Indicates if the parity is odd (0) or even (1)
       enum:
-        - '1'
-        - '0'
+        - "1"
+        - "0"
     ID:
       type: string
       description: ID of the IoT device
@@ -475,14 +468,13 @@ components:
       description: Timestamp of the message generation
     DEVICE_AT:
       type: string
-      description: >-
-        Peripheral managed with AT commands. 0 = Quectel, 1 = USR WIFI, 2 =
+      description: Peripheral managed with AT commands. 0 = Quectel, 1 = USR WIFI, 2 =
         HI-LINK WIFI, 3 = USR BLUETOOTH
       enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
+        - "0"
+        - "1"
+        - "2"
+        - "3"
     DC:
       type: string
       description: Duty cycle of PWM signal. Is a percentage from 0% to 100%
@@ -491,7 +483,7 @@ components:
       description: Frequency of a signal in KHz
     TIME:
       type: string
-      description: 'Hour:Minute when an action should be executed. The format is HH:MM'
+      description: Hour:Minute when an action should be executed. The format is HH:MM
     NTIMES:
       type: string
       description: Number of times to perform a given schedule. -1 means always

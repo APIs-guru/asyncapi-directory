@@ -17,16 +17,16 @@ servers:
 topics:
   live_diff_order_book:
     subscribe:
-      - $ref: '#/components/messages/live_diff_order_book'
+      - $ref: "#/components/messages/live_diff_order_book"
   live_order_book:
     subscribe:
-      - $ref: '#/components/messages/live_order_book'
+      - $ref: "#/components/messages/live_order_book"
   live_orders:
     subscribe:
-      - $ref: '#/components/messages/live_orders'
+      - $ref: "#/components/messages/live_orders"
   live_trades:
     subscribe:
-      - $ref: '#/components/messages/live_trades'
+      - $ref: "#/components/messages/live_trades"
 components:
   messages:
     live_diff_order_book:
@@ -34,15 +34,15 @@ components:
     live_order_book:
       summary: Live Order Book
       payload:
-        $ref: '#/components/schemas/live_order_book'
+        $ref: "#/components/schemas/live_order_book"
     live_orders:
       summary: Live Orders
       payload:
-        $ref: '#/components/schemas/live_orders'
+        $ref: "#/components/schemas/live_orders"
     live_trades:
       summary: Live Trades
       payload:
-        $ref: '#/components/schemas/live_trades'
+        $ref: "#/components/schemas/live_trades"
   schemas:
     live_order_book: {}
     live_orders: {}

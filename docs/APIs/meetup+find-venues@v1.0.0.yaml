@@ -11,7 +11,7 @@ servers:
       text:
         description: Raw full text search query
       country:
-        description: 'A valid two charater country code, desfaults to US'
+        description: A valid two charater country code, desfaults to US
       location:
         description: Raw text location query
       lon:
@@ -31,7 +31,7 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/find_venues'
+    - $ref: "#/components/messages/find_venues"
 asyncapi: 1.2.0
 components:
   messages:

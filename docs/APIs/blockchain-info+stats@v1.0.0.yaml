@@ -7,13 +7,13 @@ servers:
     scheme: https
     variables:
       format:
-        description: 'The format to return (json,html).'
+        description: The format to return (json,html).
 stream:
   framing:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/stats'
+    - $ref: "#/components/messages/stats"
 asyncapi: 1.2.0
 components:
   messages:

@@ -7,15 +7,14 @@ servers:
     scheme: https
     variables:
       fields:
-        description: >-
-          Request that additional fields (separated by commas) be included in
+        description: Request that additional fields (separated by commas) be included in
           the output.
 stream:
   framing:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/notifications'
+    - $ref: "#/components/messages/notifications"
 asyncapi: 1.2.0
 components:
   messages:

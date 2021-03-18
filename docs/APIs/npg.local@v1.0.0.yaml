@@ -10,26 +10,26 @@ tags:
   - name: term
 events:
   receive:
-    - $ref: '#/components/messages/listProjects'
-    - $ref: '#/components/messages/addProject'
-    - $ref: '#/components/messages/loadProject'
-    - $ref: '#/components/messages/deleteProject'
-    - $ref: '#/components/messages/version'
-    - $ref: '#/components/messages/listBackends'
-    - $ref: '#/components/messages/listTerms'
-    - $ref: '#/components/messages/addTerm'
-    - $ref: '#/components/messages/loadTerm'
-    - $ref: '#/components/messages/deleteTerm'
+    - $ref: "#/components/messages/listProjects"
+    - $ref: "#/components/messages/addProject"
+    - $ref: "#/components/messages/loadProject"
+    - $ref: "#/components/messages/deleteProject"
+    - $ref: "#/components/messages/version"
+    - $ref: "#/components/messages/listBackends"
+    - $ref: "#/components/messages/listTerms"
+    - $ref: "#/components/messages/addTerm"
+    - $ref: "#/components/messages/loadTerm"
+    - $ref: "#/components/messages/deleteTerm"
   send:
-    - $ref: '#/components/messages/listProjectsResp'
-    - $ref: '#/components/messages/addProjectResp'
-    - $ref: '#/components/messages/loadProjectResp'
-    - $ref: '#/components/messages/deleteProjectResp'
-    - $ref: '#/components/messages/versionResp'
-    - $ref: '#/components/messages/listBackendsResp'
-    - $ref: '#/components/messages/listTermsResp'
-    - $ref: '#/components/messages/addTermResp'
-    - $ref: '#/components/messages/deleteTermResp'
+    - $ref: "#/components/messages/listProjectsResp"
+    - $ref: "#/components/messages/addProjectResp"
+    - $ref: "#/components/messages/loadProjectResp"
+    - $ref: "#/components/messages/deleteProjectResp"
+    - $ref: "#/components/messages/versionResp"
+    - $ref: "#/components/messages/listBackendsResp"
+    - $ref: "#/components/messages/listTermsResp"
+    - $ref: "#/components/messages/addTermResp"
+    - $ref: "#/components/messages/deleteTermResp"
 components:
   messages:
     listProjects:
@@ -43,19 +43,19 @@ components:
       payload:
         type: array
         items:
-          $ref: '#/components/schemas/project'
+          $ref: "#/components/schemas/project"
     addProject:
       summary: Add a new project
       tags:
         - name: project
       payload:
-        $ref: '#/components/schemas/project'
+        $ref: "#/components/schemas/project"
     addProjectResp:
       summary: Result of project addition
       tags:
         - name: project
       payload:
-        $ref: '#/components/schemas/result'
+        $ref: "#/components/schemas/result"
     loadProject:
       summary: Load a project
       tags:
@@ -71,7 +71,7 @@ components:
       tags:
         - name: project
       payload:
-        $ref: '#/components/schemas/project'
+        $ref: "#/components/schemas/project"
     deleteProject:
       summary: Delete a project
       tags:
@@ -87,7 +87,7 @@ components:
       tags:
         - name: project
       payload:
-        $ref: '#/components/schemas/result'
+        $ref: "#/components/schemas/result"
     version:
       summary: Get server version
       tags:
@@ -109,7 +109,7 @@ components:
       payload:
         type: array
         items:
-          $ref: '#/components/schemas/backend'
+          $ref: "#/components/schemas/backend"
     listTerms:
       summary: List terminal
       tags:
@@ -121,19 +121,19 @@ components:
       payload:
         type: array
         items:
-          $ref: '#/components/schemas/term'
+          $ref: "#/components/schemas/term"
     addTerm:
       summary: Add a new terminal
       tags:
         - name: term
       payload:
-        $ref: '#/components/schemas/termreq'
+        $ref: "#/components/schemas/termreq"
     addTermResp:
       summary: Added a new terminal
       tags:
         - name: term
       payload:
-        $ref: '#/components/schemas/term'
+        $ref: "#/components/schemas/term"
     loadTerm:
       summary: Load a terminal
       tags:
@@ -148,7 +148,7 @@ components:
       tags:
         - name: term
       payload:
-        $ref: '#/components/schemas/term'
+        $ref: "#/components/schemas/term"
     deleteTerm:
       summary: Delete a terminal
       tags:
@@ -163,7 +163,7 @@ components:
       tags:
         - name: term
       payload:
-        $ref: '#/components/schemas/result'
+        $ref: "#/components/schemas/result"
   schemas:
     project:
       type: object
@@ -176,7 +176,7 @@ components:
         name:
           type: string
         topology:
-          $ref: '#/components/schemas/topology'
+          $ref: "#/components/schemas/topology"
     termreq:
       type: object
       properties:
@@ -234,14 +234,14 @@ components:
         - image
       properties:
         backend:
-          $ref: '#/components/schemas/backend'
+          $ref: "#/components/schemas/backend"
         name:
           type: string
         image:
           type: string
         x:
           type: integer
-        'y':
+        y:
           type: integer
     bridge:
       type: object
@@ -252,7 +252,7 @@ components:
           type: string
         x:
           type: integer
-        'y':
+        y:
           type: integer
     netem:
       type: object
@@ -268,28 +268,28 @@ components:
         - bridge
       properties:
         node:
-          $ref: '#/components/schemas/node'
+          $ref: "#/components/schemas/node"
         bridge:
-          $ref: '#/components/schemas/bridge'
+          $ref: "#/components/schemas/bridge"
         up:
-          $ref: '#/components/schemas/netem'
+          $ref: "#/components/schemas/netem"
         down:
-          $ref: '#/components/schemas/netem'
+          $ref: "#/components/schemas/netem"
     topology:
       type: object
       properties:
         backends:
           type: array
           items:
-            $ref: '#/components/schemas/backend'
+            $ref: "#/components/schemas/backend"
         nodes:
           type: array
           items:
-            $ref: '#/components/schemas/node'
+            $ref: "#/components/schemas/node"
         links:
           type: array
           items:
-            $ref: '#/components/schemas/link'
+            $ref: "#/components/schemas/link"
     result:
       type: object
       required:

@@ -7,10 +7,10 @@ info:
     any device listening the proper events
   license:
     name: Apache 2.0
-    url: 'https://www.apache.org/licenses/LICENSE-2.0'
+    url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
   mosquitto:
-    url: 'tcp://mr1nljqp0y1g2d.messaging.solace.cloud:21128'
+    url: tcp://mr1nljqp0y1g2d.messaging.solace.cloud:21128
     protocol: mqtt
 channels:
   card/presented:

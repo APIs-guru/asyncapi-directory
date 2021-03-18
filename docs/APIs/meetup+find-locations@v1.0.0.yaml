@@ -15,8 +15,7 @@ servers:
           The desired number of locations to return in a single set of results.
           Defaults to 200
       offset:
-        description: >-
-          The current offset in the paginated set, represented as an
+        description: The current offset in the paginated set, represented as an
           incrementing value
       lat:
         description: |-
@@ -29,7 +28,7 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/find_locations'
+    - $ref: "#/components/messages/find_locations"
 asyncapi: 1.2.0
 components:
   messages:

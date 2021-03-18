@@ -3,9 +3,9 @@ info:
   title: Gitter Streaming API
   version: 1.0.0
 servers:
-  - url: 'https://stream.gitter.im/v1/rooms/{roomId}/{resource}'
+  - url: https://stream.gitter.im/v1/rooms/{roomId}/{resource}
     scheme: https
-    schemeVersion: '1.1'
+    schemeVersion: "1.1"
     variables:
       roomId:
         description: Id of the Gitter room.
@@ -21,8 +21,8 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/chatMessage'
-    - $ref: '#/components/messages/heartbeat'
+    - $ref: "#/components/messages/chatMessage"
+    - $ref: "#/components/messages/heartbeat"
 components:
   securitySchemes:
     httpBearerToken:
@@ -30,9 +30,8 @@ components:
       scheme: bearer
   messages:
     chatMessage:
-      summary: >-
-        A message represents an individual chat message sent to a room. They are
-        a sub-resource of a room.
+      summary: A message represents an individual chat message sent to a room. They
+        are a sub-resource of a room.
       payload:
         type: object
         properties:
@@ -111,7 +110,7 @@ components:
                     type: string
           issues:
             type: array
-            description: 'List of #Issues referenced in the message.'
+            description: "List of #Issues referenced in the message."
             items:
               type: object
               properties:

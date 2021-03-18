@@ -3,11 +3,11 @@ info:
   title: Blockchain Info
   version: 1.0.0
 servers:
-  - url: 'blockchain.info/blocks/{pool_name}'
+  - url: blockchain.info/blocks/{pool_name}
     scheme: https
     variables:
       format:
-        description: 'The format to return (json,html).'
+        description: The format to return (json,html).
       pool_name:
         description: The pool name.
 stream:
@@ -15,8 +15,8 @@ stream:
     type: chunked
     delimiter: \r\n
   read:
-    - $ref: '#/components/messages/blocks_{pool_name}'
+    - $ref: "#/components/messages/blocks_{pool_name}"
 asyncapi: 1.2.0
 components:
   messages:
-    'blocks_{pool_name}': {}
+    "blocks_{pool_name}": {}
