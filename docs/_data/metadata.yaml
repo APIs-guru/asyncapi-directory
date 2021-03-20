@@ -1,23 +1,3 @@
-slack.com:
-  events:
-    origin: >-
-      https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
-gitter.com:
-  streaming:
-    origin: >-
-      https://raw.githubusercontent.com/asyncapi/asyncapi/master/examples/1.2.0/gitter-streaming.yml
-npg.local:
-  default:
-    origin: >-
-      https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json
-soporte-tecnico.bitnamiapp.com:
-  IoT-Device-Simulator:
-    origin: >-
-      https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json
-ibagroupit.com:
-  IoT-Device-Simulator:
-    origin: >-
-      https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml
 1forge:
   api-usage-quota:
     origin: >-
@@ -39,6 +19,21 @@ ibagroupit.com:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/1forge/1forge-get-currency-symbols-api-stream-async.md
     stub: true
+ably-bart:
+  btfsr:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/173/original/bart.yaml?1602776961
+    stub: false
+ably-bbc:
+  news:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/013/original/bbc.yaml?1602776548
+    stub: false
+ably-openweathermap:
+  weather:
+    origin: >-
+      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/019/original/weather.yaml?1602776654
+    stub: false
 bitstamp:
   websocket:
     origin: >-
@@ -157,13 +152,13 @@ facebook:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-album-photos-stream-async.md
     stub: true
-  get-conversation-messages:
-    origin: >-
-      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-conversation-messages-stream-async.md
-    stub: true
   get-conversation:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-conversation-stream-async.md
+    stub: true
+  get-conversation-messages:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/facebook/facebook-get-conversation-messages-stream-async.md
     stub: true
   get-group-feed:
     origin: >-
@@ -235,6 +230,10 @@ github:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-organizations-stream-async.md
     stub: true
+  get-orgs-org:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-stream-async.md
+    stub: true
   get-orgs-org-events:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-events-stream-async.md
@@ -246,10 +245,6 @@ github:
   get-orgs-org-repos:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-repos-stream-async.md
-    stub: true
-  get-orgs-org:
-    origin: >-
-      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-orgs-org-stream-async.md
     stub: true
   get-rate-limit:
     origin: >-
@@ -287,6 +282,10 @@ github:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/github/github-get-users-username-orgs-stream-async.md
     stub: true
+gitter.com:
+  streaming:
+    origin: >-
+      https://raw.githubusercontent.com/asyncapi/asyncapi/master/examples/1.2.0/gitter-streaming.yml
 gmail:
   get-history:
     origin: >-
@@ -309,6 +308,10 @@ google-sheets:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/google-sheets/google-sheets-get-spreadsheet-stream-async.md
     stub: true
+ibagroupit.com:
+  IoT-Device-Simulator:
+    origin: >-
+      https://raw.githubusercontent.com/IBA-Group-IT/IoT-data-simulator/master/services/src/main/resources/asyncapi.yaml
 iex:
   auction:
     origin: >-
@@ -379,13 +382,13 @@ iex:
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/iex/iex-tops-stream-async.md
     stub: true
 instagram:
-  instagram-carousel-comments:
-    origin: >-
-      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-carousel-comments-stream-async.md
-    stub: true
   instagram-carousel:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-carousel-stream-async.md
+    stub: true
+  instagram-carousel-comments:
+    origin: >-
+      https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/instagram/instagram-instagram-carousel-comments-stream-async.md
     stub: true
   instagram-media-comments:
     origin: >-
@@ -404,6 +407,10 @@ intrinio:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/intrinio/intrinio-securities-stream-async.md
     stub: true
+jukeberry:
+  asyncapiconfdemo:
+    origin: >-
+      https://raw.githubusercontent.com/Jukeberry/node-player/master/asyncapi.yaml
 linkedin:
   get-companies:
     origin: >-
@@ -540,6 +547,10 @@ news-api:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/news-api/news-api-top-headlines-stream-async.md
     stub: true
+npg.local:
+  default:
+    origin: >-
+      https://raw.githubusercontent.com/zijpn/npg-server/master/schema/api/npgapi.json
 pinboard:
   get-all-posts:
     origin: >-
@@ -627,6 +638,14 @@ sendgrid:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/sendgrid/sendgrid-get-suppression-bounces-stream-async.md
     stub: true
+slack.com:
+  events:
+    origin: >-
+      https://raw.githubusercontent.com/slackapi/slack-api-specs/master/events-api/slack_events_api_async_v1.json
+soporte-tecnico.bitnamiapp.com:
+  IoT-Device-Simulator:
+    origin: >-
+      https://raw.githubusercontent.com/Sinapse-Energia/IoT-Device-Simulator/master/APIs/SCINAP/json/scinap_api_asyncapi.json
 spotify:
   get-albums:
     origin: >-
@@ -789,22 +808,3 @@ twitter:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-show-timelines-status-stream-async.md
     stub: true
-jukeberry:
-  asyncapiconfdemo:
-    origin: >-
-      https://raw.githubusercontent.com/Jukeberry/node-player/master/asyncapi.yaml
-ably-bbc:
-  news:
-    origin: >-
-      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/013/original/bbc.yaml?1602776548
-    stub: false
-ably-openweathermap:
-  weather:
-    origin: >-
-      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/019/original/weather.yaml?1602776654
-    stub: false
-ably-bart:
-  btfsr:
-    origin: >-
-      https://ik.imagekit.io/ably/s3/xchg_products/async_api_specs/000/000/173/original/bart.yaml?1602776961
-    stub: false

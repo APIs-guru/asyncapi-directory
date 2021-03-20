@@ -24,6 +24,18 @@
       "url": "/APIs/1forge+get-currency-symbols@v1.0.0/"
     },
 {
+      "name": "BART GTFS-R on Ably Hub",
+      "service": "btfsr",
+      "slug": "ably-bart+btfsr@v1.0.0",
+      "url": "/APIs/ably-bart+btfsr@v1.0.0/"
+    },
+{
+      "name": "BBC News on Ably Hub",
+      "service": "news",
+      "slug": "ably-bbc+news@v1.0.0",
+      "url": "/APIs/ably-bbc+news@v1.0.0/"
+    },
+{
       "name": "Bitstamp Websocket API",
       "service": "websocket",
       "slug": "bitstamp+websocket@v1.0.0",
@@ -70,6 +82,12 @@
       "service": "pending-collaborations",
       "slug": "box+pending-collaborations@v1.0.0",
       "url": "/APIs/box+pending-collaborations@v1.0.0/"
+    },
+{
+      "name": "Box User Events, Enterprise Events (stream)",
+      "service": "user-events-enterprise-events",
+      "slug": "box+user-events-enterprise-events@v1.0.0",
+      "url": "/APIs/box+user-events-enterprise-events@v1.0.0/"
     },
 {
       "name": "Disqus Categories List (stream)",
@@ -186,16 +204,16 @@
       "url": "/APIs/facebook+get-album-photos@v1.0.0/"
     },
 {
-      "name": "Facebook Get Conversation Messages (stream)",
-      "service": "get-conversation-messages",
-      "slug": "facebook+get-conversation-messages@v1.0.0",
-      "url": "/APIs/facebook+get-conversation-messages@v1.0.0/"
-    },
-{
       "name": "Facebook Get Conversation (stream)",
       "service": "get-conversation",
       "slug": "facebook+get-conversation@v1.0.0",
       "url": "/APIs/facebook+get-conversation@v1.0.0/"
+    },
+{
+      "name": "Facebook Get Conversation Messages (stream)",
+      "service": "get-conversation-messages",
+      "slug": "facebook+get-conversation-messages@v1.0.0",
+      "url": "/APIs/facebook+get-conversation-messages@v1.0.0/"
     },
 {
       "name": "Facebook Get Group Feed (stream)",
@@ -300,6 +318,12 @@
       "url": "/APIs/github+get-organizations@v1.0.0/"
     },
 {
+      "name": "GitHub Get Orgs Org (stream)",
+      "service": "get-orgs-org",
+      "slug": "github+get-orgs-org@v1.0.0",
+      "url": "/APIs/github+get-orgs-org@v1.0.0/"
+    },
+{
       "name": "GitHub Get Orgs Org Events (stream)",
       "service": "get-orgs-org-events",
       "slug": "github+get-orgs-org-events@v1.0.0",
@@ -316,12 +340,6 @@
       "service": "get-orgs-org-repos",
       "slug": "github+get-orgs-org-repos@v1.0.0",
       "url": "/APIs/github+get-orgs-org-repos@v1.0.0/"
-    },
-{
-      "name": "GitHub Get Orgs Org (stream)",
-      "service": "get-orgs-org",
-      "slug": "github+get-orgs-org@v1.0.0",
-      "url": "/APIs/github+get-orgs-org@v1.0.0/"
     },
 {
       "name": "GitHub Get Rate Limit (stream)",
@@ -376,6 +394,12 @@
       "service": "get-users-username-orgs",
       "slug": "github+get-users-username-orgs@v1.0.0",
       "url": "/APIs/github+get-users-username-orgs@v1.0.0/"
+    },
+{
+      "name": "Gitter Streaming API",
+      "service": "streaming",
+      "slug": "gitter.com+streaming@v1.0.0",
+      "url": "/APIs/gitter.com+streaming@v1.0.0/"
     },
 {
       "name": "Gmail Get History (stream)",
@@ -510,16 +534,16 @@
       "url": "/APIs/iex+tops@v1.0.0/"
     },
 {
-      "name": "Instagram Instagram Carousel Comments (stream)",
-      "service": "instagram-carousel-comments",
-      "slug": "instagram+instagram-carousel-comments@v1.0.0",
-      "url": "/APIs/instagram+instagram-carousel-comments@v1.0.0/"
-    },
-{
       "name": "Instagram Instagram Carousel (stream)",
       "service": "instagram-carousel",
       "slug": "instagram+instagram-carousel@v1.0.0",
       "url": "/APIs/instagram+instagram-carousel@v1.0.0/"
+    },
+{
+      "name": "Instagram Instagram Carousel Comments (stream)",
+      "service": "instagram-carousel-comments",
+      "slug": "instagram+instagram-carousel-comments@v1.0.0",
+      "url": "/APIs/instagram+instagram-carousel-comments@v1.0.0/"
     },
 {
       "name": "Instagram Instagram Media Comments (stream)",
@@ -546,6 +570,18 @@
       "url": "/APIs/intrinio+securities@v1.0.0/"
     },
 {
+      "name": "IoT Data simulator websocket/STOMP API",
+      "service": "IoT-Device-Simulator",
+      "slug": "ibagroupit.com+IoT-Device-Simulator@v1.0.0",
+      "url": "/APIs/ibagroupit.com+IoT-Device-Simulator@v1.0.0/"
+    },
+{
+      "name": "Jukeberry",
+      "service": "asyncapiconfdemo",
+      "slug": "jukeberry+asyncapiconfdemo@v1.0.0",
+      "url": "/APIs/jukeberry+asyncapiconfdemo@v1.0.0/"
+    },
+{
       "name": "LinkedIn Get Companies (stream)",
       "service": "get-companies",
       "slug": "linkedin+get-companies@v1.0.0",
@@ -562,6 +598,36 @@
       "service": "get-people",
       "slug": "linkedin+get-people@v1.0.0",
       "url": "/APIs/linkedin+get-people@v1.0.0/"
+    },
+{
+      "name": "Meetup",
+      "service": "find-groups",
+      "slug": "meetup+find-groups@v1.0.0",
+      "url": "/APIs/meetup+find-groups@v1.0.0/"
+    },
+{
+      "name": "Meetup",
+      "service": "find-locations",
+      "slug": "meetup+find-locations@v1.0.0",
+      "url": "/APIs/meetup+find-locations@v1.0.0/"
+    },
+{
+      "name": "Meetup",
+      "service": "find-topics",
+      "slug": "meetup+find-topics@v1.0.0",
+      "url": "/APIs/meetup+find-topics@v1.0.0/"
+    },
+{
+      "name": "Meetup",
+      "service": "find-venues",
+      "slug": "meetup+find-venues@v1.0.0",
+      "url": "/APIs/meetup+find-venues@v1.0.0/"
+    },
+{
+      "name": "Meetup",
+      "service": "notifications",
+      "slug": "meetup+notifications@v1.0.0",
+      "url": "/APIs/meetup+notifications@v1.0.0/"
     },
 {
       "name": "Meetup ActivityFeed (stream)",
@@ -612,46 +678,16 @@
       "url": "/APIs/meetup+find-events@v1.0.0/"
     },
 {
-      "name": "Meetup",
-      "service": "find-groups",
-      "slug": "meetup+find-groups@v1.0.0",
-      "url": "/APIs/meetup+find-groups@v1.0.0/"
-    },
-{
-      "name": "Meetup",
-      "service": "find-locations",
-      "slug": "meetup+find-locations@v1.0.0",
-      "url": "/APIs/meetup+find-locations@v1.0.0/"
-    },
-{
-      "name": "Meetup",
-      "service": "find-topics",
-      "slug": "meetup+find-topics@v1.0.0",
-      "url": "/APIs/meetup+find-topics@v1.0.0/"
-    },
-{
       "name": "Meetup Find Upcoming Events (stream)",
       "service": "find-upcoming-events",
       "slug": "meetup+find-upcoming-events@v1.0.0",
       "url": "/APIs/meetup+find-upcoming-events@v1.0.0/"
     },
 {
-      "name": "Meetup",
-      "service": "find-venues",
-      "slug": "meetup+find-venues@v1.0.0",
-      "url": "/APIs/meetup+find-venues@v1.0.0/"
-    },
-{
       "name": "Meetup Members (stream)",
       "service": "members",
       "slug": "meetup+members@v1.0.0",
       "url": "/APIs/meetup+members@v1.0.0/"
-    },
-{
-      "name": "Meetup",
-      "service": "notifications",
-      "slug": "meetup+notifications@v1.0.0",
-      "url": "/APIs/meetup+notifications@v1.0.0/"
     },
 {
       "name": "Meetup OpenEvents (stream)",
@@ -682,6 +718,12 @@
       "service": "venues",
       "slug": "meetup+venues@v1.0.0",
       "url": "/APIs/meetup+venues@v1.0.0/"
+    },
+{
+      "name": "NPG",
+      "service": "default",
+      "slug": "npg.local@v1.0.0",
+      "url": "/APIs/npg.local@v1.0.0/"
     },
 {
       "name": "New York Times Article Search (stream)",
@@ -742,6 +784,12 @@
       "service": "top-headlines",
       "slug": "news-api+top-headlines@v1.0.0",
       "url": "/APIs/news-api+top-headlines@v1.0.0/"
+    },
+{
+      "name": "OpenWeatherMap on Ably Hub",
+      "service": "weather",
+      "slug": "ably-openweathermap+weather@v1.0.0",
+      "url": "/APIs/ably-openweathermap+weather@v1.0.0/"
     },
 {
       "name": "Pinboard Get All Posts (stream)",
@@ -816,6 +864,12 @@
       "url": "/APIs/reddit+get-subreddits-where@v1.0.0/"
     },
 {
+      "name": "Scinap Sinapse API",
+      "service": "IoT-Device-Simulator",
+      "slug": "soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1",
+      "url": "/APIs/soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1/"
+    },
+{
       "name": "SendGrid Get Alerts (stream)",
       "service": "get-alerts",
       "slug": "sendgrid+get-alerts@v1.0.0",
@@ -868,6 +922,12 @@
       "service": "get-suppression-bounces",
       "slug": "sendgrid+get-suppression-bounces@v1.0.0",
       "url": "/APIs/sendgrid+get-suppression-bounces@v1.0.0/"
+    },
+{
+      "name": "Slack Events API",
+      "service": "events",
+      "slug": "slack.com+events@v1.0.0",
+      "url": "/APIs/slack.com+events@v1.0.0/"
     },
 {
       "name": "Spotify Get Albums (stream)",
@@ -1102,66 +1162,6 @@
       "service": "show-timelines-status",
       "slug": "twitter+show-timelines-status@v1.0.0",
       "url": "/APIs/twitter+show-timelines-status@v1.0.0/"
-    },
-{
-      "name": "Box User Events, Enterprise Events (stream)",
-      "service": "user-events-enterprise-events",
-      "slug": "box+user-events-enterprise-events@v1.0.0",
-      "url": "/APIs/box+user-events-enterprise-events@v1.0.0/"
-    },
-{
-      "name": "Slack Events API",
-      "service": "events",
-      "slug": "slack.com+events@v1.0.0",
-      "url": "/APIs/slack.com+events@v1.0.0/"
-    },
-{
-      "name": "IoT Data simulator websocket/STOMP API",
-      "service": "IoT-Device-Simulator",
-      "slug": "ibagroupit.com+IoT-Device-Simulator@v1.0.0",
-      "url": "/APIs/ibagroupit.com+IoT-Device-Simulator@v1.0.0/"
-    },
-{
-      "name": "NPG",
-      "service": "default",
-      "slug": "npg.local@v1.0.0",
-      "url": "/APIs/npg.local@v1.0.0/"
-    },
-{
-      "name": "Scinap Sinapse API",
-      "service": "IoT-Device-Simulator",
-      "slug": "soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1",
-      "url": "/APIs/soporte-tecnico.bitnamiapp.com+IoT-Device-Simulator@v0.0.1/"
-    },
-{
-      "name": "Jukeberry",
-      "service": "asyncapiconfdemo",
-      "slug": "jukeberry+asyncapiconfdemo@v1.0.0",
-      "url": "/APIs/jukeberry+asyncapiconfdemo@v1.0.0/"
-    },
-{
-      "name": "Gitter Streaming API",
-      "service": "streaming",
-      "slug": "gitter.com+streaming@v1.0.0",
-      "url": "/APIs/gitter.com+streaming@v1.0.0/"
-    },
-{
-      "name": "BBC News on Ably Hub",
-      "service": "news",
-      "slug": "ably-bbc+news@v1.0.0",
-      "url": "/APIs/ably-bbc+news@v1.0.0/"
-    },
-{
-      "name": "OpenWeatherMap on Ably Hub",
-      "service": "weather",
-      "slug": "ably-openweathermap+weather@v1.0.0",
-      "url": "/APIs/ably-openweathermap+weather@v1.0.0/"
-    },
-{
-      "name": "BART GTFS-R on Ably Hub",
-      "service": "btfsr",
-      "slug": "ably-bart+btfsr@v1.0.0",
-      "url": "/APIs/ably-bart+btfsr@v1.0.0/"
     }
 ]
 
