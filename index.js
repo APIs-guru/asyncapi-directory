@@ -8,6 +8,7 @@ const util = require('util');
 
 const fetch = require('node-fetch');
 const yaml = require('yaml');
+const sortObject = require('deep-sort-object');
 const recurse = require('reftools/lib/recurse').recurse;
 const jptr = require('reftools/lib/jptr').jptr;
 const docs = require('asyncapi-docgen');
@@ -24,7 +25,7 @@ const colour = process.env.NODE_DISABLE_COLORS ?
     { red: '', yellow: '', green: '', normal: '' } :
     { red: '\x1b[31m', yellow: '\x1b[33;1m', green: '\x1b[32m', normal: '\x1b[0m' };
 
-const metadata = yaml.parse(fs.readFileSync('./docs/_data/metadata.yaml','utf8'));
+const metadata = sortObject(yaml.parse(fs.readFileSync('./docs/_data/metadata.yaml','utf8')));
 
 function fixStr(str) {
     str = str.split('\r\n').join('\n').split('\r').join('').split('---').join('###');

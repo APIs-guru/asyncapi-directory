@@ -19,6 +19,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("markdown", function(value) {
     return md.render(value);
   });
+
+  function sorted(values) {
+    return values.sort(function(a, b){
+      if (a.data.name < b.data.name) return -1;
+      if (a.data.name > b.data.name) return 1;
+      return 0;
+    });
+  }
+
+  eleventyConfig.addFilter("sorted", sorted);
+
   return {
     pathPrefix: "/asyncapi-directory/"
   }
