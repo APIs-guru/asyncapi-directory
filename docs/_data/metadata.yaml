@@ -808,3 +808,8 @@ twitter:
     origin: >-
       https://raw.githubusercontent.com/streamdata-gallery-master/asyncapi/master/_listings/twitter/twitter-show-timelines-status-stream-async.md
     stub: true
+zora:
+  ZBOS:
+    origin: >-
+      https://bitbucket.org/qbmt/zbos-mqtt-api/raw/25ee18cee0db90d9f370e0bcf1bfbb6fbb7621ce/zbos_mqtt-all-asyncapi.json
+    stub: false

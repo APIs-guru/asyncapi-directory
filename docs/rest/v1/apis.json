@@ -1162,6 +1162,12 @@
       "service": "show-timelines-status",
       "slug": "twitter+show-timelines-status@v1.0.0",
       "url": "/APIs/twitter+show-timelines-status@v1.0.0/"
+    },
+{
+      "name": "ZBOS MQTT API",
+      "service": "ZBOS",
+      "slug": "zora+ZBOS@v2.4.2",
+      "url": "/APIs/zora+ZBOS@v2.4.2/"
     }
 ]
 
