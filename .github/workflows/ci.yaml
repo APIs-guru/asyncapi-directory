@@ -25,5 +25,5 @@ jobs:
       - run: npm run build.data
       - run: npm run build.site
       - run: git add docs
-      - run: git commit -m "build: deploy docs"
+      - run: 'git commit -m "build: deploy docs"'
 
