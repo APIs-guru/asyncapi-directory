@@ -25,5 +25,7 @@ jobs:
       - run: npm run build.data
       - run: npm run build.site
       - run: git add docs
+      - run: git config user.email "mike.ralphson@gmail.com"
+      - run: git config user.name "Mike Ralphson"
       - run: 'git commit -m "build: deploy docs"'
 
