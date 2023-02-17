@@ -7,8 +7,6 @@ name: ci
 # run this on push to main, manually and scheduled
 
 on:
-  push:
-    branches: [ 'main' ]
   schedule:
     - cron: '55 23 * * 0'
   workflow_dispatch: {}
@@ -28,4 +26,5 @@ jobs:
       - run: git config user.email "mike.ralphson@gmail.com"
       - run: git config user.name "Mike Ralphson"
       - run: 'git commit -m "build: deploy docs"'
+      - run: git push
 
