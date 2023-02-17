@@ -1,0 +1,29 @@
+name: ci
+
+# Author: @MikeRalphson
+# Issue : n/a
+# Desc  : This workflow runs the weekly build
+
+# run this on push to main, manually and scheduled
+
+on:
+  push:
+    branches: [ 'main' ]
+  schedule:
+    - cron: '55 23 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run build.data
+      - run: npm run build.site
+      - run: git add docs
+      - run: git commit -m "build: deploy docs"
+
