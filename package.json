@@ -35,7 +35,7 @@
     "asyncapi-docgen": "^1.10.6",
     "deep-sort-object": "^1.0.2",
     "eleventy-plugin-seo": "^0.5.1",
-    "markdown-it": "^12.0.4",
+    "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^7.1.0",
     "node-fetch": "^2.6.1",
     "node-readfiles": "^0.2.0",
